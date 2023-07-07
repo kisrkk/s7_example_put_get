@@ -1,0 +1,113 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0-windows7.0": {
+      "S7netplus/0.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/S7.Net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/S7.Net.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "S7netplus/0.19.0": {
+      "sha512": "46kTCGhNtAsiwsWsK3xuSrsWja+yBokmVJTpP3lm4ZzAt98BLwKm8+97N2024S+2wC9QDTaiPQAVFRHJtN0Fmg==",
+      "type": "package",
+      "path": "s7netplus/0.19.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/S7.Net.dll",
+        "lib/net452/S7.Net.xml",
+        "lib/net5.0/S7.Net.dll",
+        "lib/net5.0/S7.Net.xml",
+        "lib/netstandard1.3/S7.Net.dll",
+        "lib/netstandard1.3/S7.Net.xml",
+        "lib/netstandard2.0/S7.Net.dll",
+        "lib/netstandard2.0/S7.Net.xml",
+        "s7netplus.0.19.0.nupkg.sha512",
+        "s7netplus.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0-windows7.0": [
+      "S7netplus >= 0.19.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\CPL\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\CPL\\Documents\\GitHub\\s7_example_put_get\\s7_example_put_get\\s7_example_put_get.csproj",
+      "projectName": "s7_example_put_get",
+      "projectPath": "C:\\Users\\CPL\\Documents\\GitHub\\s7_example_put_get\\s7_example_put_get\\s7_example_put_get.csproj",
+      "packagesPath": "C:\\Users\\CPL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\CPL\\Documents\\GitHub\\s7_example_put_get\\s7_example_put_get\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\CPL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "S7netplus": {
+            "target": "Package",
+            "version": "[0.19.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
