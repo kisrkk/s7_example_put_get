@@ -38,6 +38,19 @@
             label3 = new Label();
             label4 = new Label();
             btn_connect = new Button();
+            tab_con = new TabControl();
+            tabPage1 = new TabPage();
+            GB_control = new GroupBox();
+            btn_on_off_cutter = new Button();
+            btn_m3_down = new Button();
+            btn_m3_up = new Button();
+            btn_m2_ccw = new Button();
+            btn_m2_cw = new Button();
+            btn_m1_ccw = new Button();
+            btn_m1_cw = new Button();
+            tb_history = new TextBox();
+            btn_enable = new Button();
+            tabPage2 = new TabPage();
             gb_main = new GroupBox();
             tb_read_address = new TextBox();
             label14 = new Label();
@@ -59,6 +72,10 @@
             btn_read_data = new Button();
             tb_read_db = new TextBox();
             label5 = new Label();
+            tab_con.SuspendLayout();
+            tabPage1.SuspendLayout();
+            GB_control.SuspendLayout();
+            tabPage2.SuspendLayout();
             gb_main.SuspendLayout();
             SuspendLayout();
             // 
@@ -110,6 +127,113 @@
             btn_connect.Name = "btn_connect";
             btn_connect.UseVisualStyleBackColor = true;
             btn_connect.Click += btn_connect_Click;
+            // 
+            // tab_con
+            // 
+            tab_con.Controls.Add(tabPage1);
+            tab_con.Controls.Add(tabPage2);
+            resources.ApplyResources(tab_con, "tab_con");
+            tab_con.Name = "tab_con";
+            tab_con.SelectedIndex = 0;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(GB_control);
+            tabPage1.Controls.Add(tb_history);
+            tabPage1.Controls.Add(btn_enable);
+            resources.ApplyResources(tabPage1, "tabPage1");
+            tabPage1.Name = "tabPage1";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // GB_control
+            // 
+            GB_control.Controls.Add(btn_on_off_cutter);
+            GB_control.Controls.Add(btn_m3_down);
+            GB_control.Controls.Add(btn_m3_up);
+            GB_control.Controls.Add(btn_m2_ccw);
+            GB_control.Controls.Add(btn_m2_cw);
+            GB_control.Controls.Add(btn_m1_ccw);
+            GB_control.Controls.Add(btn_m1_cw);
+            resources.ApplyResources(GB_control, "GB_control");
+            GB_control.Name = "GB_control";
+            GB_control.TabStop = false;
+            // 
+            // btn_on_off_cutter
+            // 
+            resources.ApplyResources(btn_on_off_cutter, "btn_on_off_cutter");
+            btn_on_off_cutter.Name = "btn_on_off_cutter";
+            btn_on_off_cutter.UseVisualStyleBackColor = true;
+            btn_on_off_cutter.MouseDown += btn_on_off_cutter_MouseDown;
+            btn_on_off_cutter.MouseUp += btn_on_off_cutter_MouseUp;
+            // 
+            // btn_m3_down
+            // 
+            resources.ApplyResources(btn_m3_down, "btn_m3_down");
+            btn_m3_down.Name = "btn_m3_down";
+            btn_m3_down.UseVisualStyleBackColor = true;
+            btn_m3_down.MouseDown += btn_m3_down_MouseDown;
+            btn_m3_down.MouseUp += btn_m3_down_MouseUp;
+            // 
+            // btn_m3_up
+            // 
+            resources.ApplyResources(btn_m3_up, "btn_m3_up");
+            btn_m3_up.Name = "btn_m3_up";
+            btn_m3_up.UseVisualStyleBackColor = true;
+            btn_m3_up.MouseDown += btn_m3_up_MouseDown;
+            btn_m3_up.MouseUp += btn_m3_up_MouseUp;
+            // 
+            // btn_m2_ccw
+            // 
+            resources.ApplyResources(btn_m2_ccw, "btn_m2_ccw");
+            btn_m2_ccw.Name = "btn_m2_ccw";
+            btn_m2_ccw.UseVisualStyleBackColor = true;
+            btn_m2_ccw.MouseDown += btn_m2_ccw_MouseDown;
+            btn_m2_ccw.MouseUp += btn_m2_ccw_MouseUp;
+            // 
+            // btn_m2_cw
+            // 
+            resources.ApplyResources(btn_m2_cw, "btn_m2_cw");
+            btn_m2_cw.Name = "btn_m2_cw";
+            btn_m2_cw.UseVisualStyleBackColor = true;
+            btn_m2_cw.MouseDown += btn_m2_cw_MouseDown;
+            btn_m2_cw.MouseUp += btn_m2_cw_MouseUp;
+            // 
+            // btn_m1_ccw
+            // 
+            resources.ApplyResources(btn_m1_ccw, "btn_m1_ccw");
+            btn_m1_ccw.Name = "btn_m1_ccw";
+            btn_m1_ccw.UseVisualStyleBackColor = true;
+            btn_m1_ccw.MouseDown += btn_m1_ccw_MouseDown;
+            btn_m1_ccw.MouseUp += btn_m1_ccw_MouseUp;
+            // 
+            // btn_m1_cw
+            // 
+            resources.ApplyResources(btn_m1_cw, "btn_m1_cw");
+            btn_m1_cw.Name = "btn_m1_cw";
+            btn_m1_cw.UseVisualStyleBackColor = true;
+            btn_m1_cw.MouseDown += btn_m1_cw_MouseUp;
+            btn_m1_cw.MouseUp += btn_m1_cw_MouseUp;
+            // 
+            // tb_history
+            // 
+            tb_history.BorderStyle = BorderStyle.FixedSingle;
+            resources.ApplyResources(tb_history, "tb_history");
+            tb_history.Name = "tb_history";
+            tb_history.ReadOnly = true;
+            // 
+            // btn_enable
+            // 
+            resources.ApplyResources(btn_enable, "btn_enable");
+            btn_enable.Name = "btn_enable";
+            btn_enable.UseVisualStyleBackColor = true;
+            btn_enable.Click += btn_enable_Click;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(gb_main);
+            resources.ApplyResources(tabPage2, "tabPage2");
+            tabPage2.Name = "tabPage2";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
             // gb_main
             // 
@@ -205,7 +329,6 @@
             // 
             resources.ApplyResources(label9, "label9");
             label9.Name = "label9";
-            label9.Click += label9_Click;
             // 
             // button1
             // 
@@ -240,7 +363,6 @@
             // 
             resources.ApplyResources(tb_read_db, "tb_read_db");
             tb_read_db.Name = "tb_read_db";
-            tb_read_db.TextChanged += tb_read_address_TextChanged;
             // 
             // label5
             // 
@@ -251,7 +373,7 @@
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(gb_main);
+            Controls.Add(tab_con);
             Controls.Add(btn_connect);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -264,6 +386,11 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form1";
+            tab_con.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            GB_control.ResumeLayout(false);
+            tabPage2.ResumeLayout(false);
             gb_main.ResumeLayout(false);
             gb_main.PerformLayout();
             ResumeLayout(false);
@@ -281,11 +408,19 @@
         private Label label3;
         private Label label4;
         private Button btn_connect;
+        private TabControl tab_con;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
         private GroupBox gb_main;
-        private Label lb_data_read;
-        private Button btn_read_data;
-        private TextBox tb_read_db;
-        private Label label5;
+        private TextBox tb_read_address;
+        private Label label14;
+        private ComboBox cb_read_type;
+        private Label label13;
+        private Label label6;
+        private Label label12;
+        private TextBox tb_write_address;
+        private ComboBox cb_write_type;
+        private Label label11;
         private Label label10;
         private TextBox tb_data_to_write;
         private Label label8;
@@ -293,14 +428,19 @@
         private Button button1;
         private TextBox tb_write_db;
         private Label label7;
-        private ComboBox cb_write_type;
-        private Label label11;
-        private Label label12;
-        private TextBox tb_write_address;
-        private TextBox tb_read_address;
-        private Label label14;
-        private ComboBox cb_read_type;
-        private Label label13;
-        private Label label6;
+        private Label lb_data_read;
+        private Button btn_read_data;
+        private TextBox tb_read_db;
+        private Label label5;
+        private Button btn_enable;
+        private TextBox tb_history;
+        private GroupBox GB_control;
+        private Button btn_on_off_cutter;
+        private Button btn_m3_down;
+        private Button btn_m3_up;
+        private Button btn_m2_ccw;
+        private Button btn_m2_cw;
+        private Button btn_m1_ccw;
+        private Button btn_m1_cw;
     }
 }

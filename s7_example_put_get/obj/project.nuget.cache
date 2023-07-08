@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "snwli8A2IUOvoJ+/h/dzwUWS+nsL85lts2N87Dx2ohrOOcl6MLg5MTlvyKMoC5WPlgQqbS4J+wRHR68cOU8+gQ==",
+  "dgSpecHash": "A1wJe3eW/6Tu8kDBKo3fQV+2s1I92sHHZITOSMrjC+Vc+0lCa1Tkk7ybxfIJQDiyCwlt9IPZLYy0GGkS5yLHpQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\CPL\\Documents\\GitHub\\s7_example_put_get\\s7_example_put_get\\s7_example_put_get.csproj",
+  "projectFilePath": "C:\\Users\\KISR\\Documents\\Github\\s7_example_put_get\\s7_example_put_get\\s7_example_put_get.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\CPL\\.nuget\\packages\\s7netplus\\0.19.0\\s7netplus.0.19.0.nupkg.sha512"
+    "C:\\Users\\KISR\\.nuget\\packages\\s7netplus\\0.19.0\\s7netplus.0.19.0.nupkg.sha512"
   ],
   "logs": []
 }
