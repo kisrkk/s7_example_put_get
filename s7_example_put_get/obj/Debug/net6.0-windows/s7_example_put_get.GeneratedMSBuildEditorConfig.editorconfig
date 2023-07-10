@@ -14,4 +14,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = s7_example_put_get
-build_property.ProjectDir = C:\Users\KISR\Documents\Github\s7_example_put_get\s7_example_put_get\
+build_property.ProjectDir = C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\

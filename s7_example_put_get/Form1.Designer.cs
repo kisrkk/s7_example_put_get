@@ -41,6 +41,11 @@
             tab_con = new TabControl();
             tabPage1 = new TabPage();
             GB_control = new GroupBox();
+            btn_yr_tare = new Button();
+            label15 = new Label();
+            lb_yr_en = new Label();
+            btn_move_yr = new Button();
+            tb_yr_to_move = new TextBox();
             btn_on_off_cutter = new Button();
             btn_m3_down = new Button();
             btn_m3_up = new Button();
@@ -147,6 +152,11 @@
             // 
             // GB_control
             // 
+            GB_control.Controls.Add(btn_yr_tare);
+            GB_control.Controls.Add(label15);
+            GB_control.Controls.Add(lb_yr_en);
+            GB_control.Controls.Add(btn_move_yr);
+            GB_control.Controls.Add(tb_yr_to_move);
             GB_control.Controls.Add(btn_on_off_cutter);
             GB_control.Controls.Add(btn_m3_down);
             GB_control.Controls.Add(btn_m3_up);
@@ -157,6 +167,38 @@
             resources.ApplyResources(GB_control, "GB_control");
             GB_control.Name = "GB_control";
             GB_control.TabStop = false;
+            // 
+            // btn_yr_tare
+            // 
+            resources.ApplyResources(btn_yr_tare, "btn_yr_tare");
+            btn_yr_tare.Name = "btn_yr_tare";
+            btn_yr_tare.UseVisualStyleBackColor = true;
+            btn_yr_tare.Click += btn_yr_tare_Click;
+            btn_yr_tare.MouseDown += btn_yr_tare_MouseDown;
+            btn_yr_tare.MouseUp += btn_yr_tare_MouseUp;
+            // 
+            // label15
+            // 
+            resources.ApplyResources(label15, "label15");
+            label15.Name = "label15";
+            // 
+            // lb_yr_en
+            // 
+            resources.ApplyResources(lb_yr_en, "lb_yr_en");
+            lb_yr_en.Name = "lb_yr_en";
+            lb_yr_en.Click += lb_yr_en_Click;
+            // 
+            // btn_move_yr
+            // 
+            resources.ApplyResources(btn_move_yr, "btn_move_yr");
+            btn_move_yr.Name = "btn_move_yr";
+            btn_move_yr.UseVisualStyleBackColor = true;
+            btn_move_yr.Click += btn_move_yr_Click;
+            // 
+            // tb_yr_to_move
+            // 
+            resources.ApplyResources(tb_yr_to_move, "tb_yr_to_move");
+            tb_yr_to_move.Name = "tb_yr_to_move";
             // 
             // btn_on_off_cutter
             // 
@@ -386,10 +428,13 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form1";
+            FormClosing += Form1_FormClosing;
+            Load += Form1_Load;
             tab_con.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
             GB_control.ResumeLayout(false);
+            GB_control.PerformLayout();
             tabPage2.ResumeLayout(false);
             gb_main.ResumeLayout(false);
             gb_main.PerformLayout();
@@ -442,5 +487,10 @@
         private Button btn_m2_cw;
         private Button btn_m1_ccw;
         private Button btn_m1_cw;
+        private Label lb_yr_en;
+        private Button btn_move_yr;
+        private TextBox tb_yr_to_move;
+        private Button btn_yr_tare;
+        private Label label15;
     }
 }

@@ -1,6 +1,9 @@
+using Microsoft.AspNetCore.Components;
 using S7.Net;
+using System.Diagnostics.Eventing.Reader;
 using System.Net;
 using System.Numerics;
+using System.Threading;
 
 namespace s7_example_put_get
 {
@@ -10,6 +13,10 @@ namespace s7_example_put_get
         private bool auto_overide_enable = false;
         private string str_history = "";
         private Plc plc;
+        System.Windows.Forms.Timer Task_toRead_data = new System.Windows.Forms.Timer();
+        System.Windows.Forms.Timer Task_to_yr = new System.Windows.Forms.Timer();
+        private bool start_cal_to_yr = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -35,6 +42,77 @@ namespace s7_example_put_get
 
         }
 
+        private void Task_toRead_data_callback(object sender, EventArgs e)
+        {
+            if (!auto_overide_enable)
+            {
+                Task_toRead_data.Dispose();
+                return;
+            }
+            lb_yr_en.Text = read_real("DB1", "16.0").ToString("0.00");
+        }
+
+        private void StartRead_task()
+        {
+            //Task_toRead_data = new System.Threading.Timer(Task_toRead_data_callback, null, 0, 1000);
+            Task_toRead_data.Tick += new EventHandler(Task_toRead_data_callback);
+            Task_toRead_data.Interval = 1000;
+            Task_toRead_data.Start();
+        }
+        private void StopRead_task()
+        {
+            Task_toRead_data.Stop();
+        }
+
+        private void Task_to_yr_task_callback(object sender, EventArgs e)
+        {
+            if (!auto_overide_enable)
+            {
+                Task_toRead_data.Dispose();
+                return;
+            }
+            double target_to_move = 0.00f;
+            try
+            {
+                target_to_move = double.Parse(tb_yr_to_move.Text); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Invaild Data ");
+            }
+
+            if (target_to_move >= read_real("DB1","16.0")) {
+                btn_move_yr.Text = "Moving";
+                write_bool("DB1", "28.0", false);
+                write_bool("DB1", "28.1", true);
+                write_bool("DB1", "28.2", false);
+                write_bool("DB1", "28.3", true);
+            } else {
+                btn_move_yr.Text = "Move yr";
+                write_bool("DB1", "28.1", false);
+                write_bool("DB1", "28.3", false);
+                Task_toRead_data.Dispose();
+                start_cal_to_yr = false;
+                return;
+            }
+        }
+
+        private void Start_to_yr_task()
+        {
+            start_cal_to_yr = true;
+            //Task_toRead_data = new System.Threading.Timer(Task_toRead_data_callback, null, 0, 1000);
+            Task_to_yr.Tick += new EventHandler(Task_to_yr_task_callback);
+            Task_to_yr.Interval = 1000;
+            Task_to_yr.Start();
+        }
+        private void Stop_to_yr_task()
+        {
+            start_cal_to_yr = false;
+            btn_move_yr.Text = "Move yr";
+            write_bool("DB1", "28.1", false);
+            write_bool("DB1", "28.3", false);
+            Task_to_yr.Stop();
+        }
         private void btn_connect_Click(object sender, EventArgs e)
         {
             if (!isConnect)
@@ -180,6 +258,28 @@ namespace s7_example_put_get
             tb_history.Text = str_history;
         }
 
+        double read_real(string data_block, string data_address)
+        {
+            double real = 0.0f;
+            string con = "";
+            con += data_block;
+            try
+            {
+                con += ".DBD";
+                con += data_address;
+                //str_history += "Write " + data.ToString() + " to " + con + "\r\n";
+                var dword = (uint)(plc.Read(con));
+                real = dword.ConvertToFloat();
+            }
+            catch (Exception ex)
+            {
+                str_history += "Read Error " + ex.Message + "\r\n";
+                MessageBox.Show(ex.Message, "Error");
+            }
+
+            return real;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -226,13 +326,18 @@ namespace s7_example_put_get
             GB_control.Enabled = auto_overide_enable;
             if (auto_overide_enable)
             {
+                StartRead_task();
                 btn_enable.Text = "Disable";
                 write_bool("DB1", "40.0", true);
             }
             else
             {
+                StopRead_task();
                 btn_enable.Text = "Enable";
                 write_bool("DB1", "40.0", false);
+                btn_move_yr.Text = "Move yr";
+                write_bool("DB1", "28.1", false);
+                write_bool("DB1", "28.3", false);
             }
         }
 
@@ -310,6 +415,62 @@ namespace s7_example_put_get
         private void btn_on_off_cutter_MouseUp(object sender, MouseEventArgs e)
         {
             write_bool("DB1", "40.4", false);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (isConnect)
+            {
+                write_bool("DB1", "40.0", false);
+            }
+        }
+
+        private void btn_move_yr_Click(object sender, EventArgs e)
+        {
+            if (!start_cal_to_yr)
+            { 
+                Start_to_yr_task(); 
+            }
+            else
+            {
+                Stop_to_yr_task() ;
+            }
+        }
+
+        private void lb_yr_en_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_yr_tare_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_on_off_cutter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_yr_tare_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (auto_overide_enable)
+            {
+                write_bool("DB1", "40.5", true);
+            }
+        }
+
+        private void btn_yr_tare_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (auto_overide_enable)
+            {
+                write_bool("DB1", "40.5", false);
+            }
         }
     }
 }
