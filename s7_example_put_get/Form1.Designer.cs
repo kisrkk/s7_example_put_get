@@ -77,13 +77,24 @@
             btn_read_data = new Button();
             tb_read_db = new TextBox();
             label5 = new Label();
+            label16 = new Label();
+            tabPage3 = new TabPage();
+            label17 = new Label();
+            label18 = new Label();
+            lb_pulse = new Label();
+            lb_cail_yard = new Label();
+            label19 = new Label();
             textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            label20 = new Label();
+            label21 = new Label();
+            label22 = new Label();
+            button2 = new Button();
             tab_con.SuspendLayout();
             tabPage1.SuspendLayout();
             GB_control.SuspendLayout();
             tabPage2.SuspendLayout();
             gb_main.SuspendLayout();
+            tabPage3.SuspendLayout();
             SuspendLayout();
             // 
             // cb_plc_type
@@ -139,6 +150,7 @@
             // 
             tab_con.Controls.Add(tabPage1);
             tab_con.Controls.Add(tabPage2);
+            tab_con.Controls.Add(tabPage3);
             resources.ApplyResources(tab_con, "tab_con");
             tab_con.Name = "tab_con";
             tab_con.SelectedIndex = 0;
@@ -414,23 +426,83 @@
             resources.ApplyResources(label5, "label5");
             label5.Name = "label5";
             // 
+            // label16
+            // 
+            resources.ApplyResources(label16, "label16");
+            label16.Name = "label16";
+            // 
+            // tabPage3
+            // 
+            tabPage3.Controls.Add(button2);
+            tabPage3.Controls.Add(label22);
+            tabPage3.Controls.Add(label21);
+            tabPage3.Controls.Add(label20);
+            tabPage3.Controls.Add(textBox1);
+            tabPage3.Controls.Add(label19);
+            tabPage3.Controls.Add(lb_cail_yard);
+            tabPage3.Controls.Add(lb_pulse);
+            tabPage3.Controls.Add(label18);
+            tabPage3.Controls.Add(label17);
+            resources.ApplyResources(tabPage3, "tabPage3");
+            tabPage3.Name = "tabPage3";
+            tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            resources.ApplyResources(label17, "label17");
+            label17.Name = "label17";
+            // 
+            // label18
+            // 
+            resources.ApplyResources(label18, "label18");
+            label18.Name = "label18";
+            // 
+            // lb_pulse
+            // 
+            resources.ApplyResources(lb_pulse, "lb_pulse");
+            lb_pulse.Name = "lb_pulse";
+            // 
+            // lb_cail_yard
+            // 
+            resources.ApplyResources(lb_cail_yard, "lb_cail_yard");
+            lb_cail_yard.Name = "lb_cail_yard";
+            // 
+            // label19
+            // 
+            resources.ApplyResources(label19, "label19");
+            label19.Name = "label19";
+            // 
             // textBox1
             // 
             resources.ApplyResources(textBox1, "textBox1");
-            textBox1.ForeColor = Color.FromArgb(192, 0, 0);
             textBox1.Name = "textBox1";
             // 
-            // textBox2
+            // label20
             // 
-            resources.ApplyResources(textBox2, "textBox2");
-            textBox2.Name = "textBox2";
+            resources.ApplyResources(label20, "label20");
+            label20.Name = "label20";
+            // 
+            // label21
+            // 
+            resources.ApplyResources(label21, "label21");
+            label21.Name = "label21";
+            // 
+            // label22
+            // 
+            resources.ApplyResources(label22, "label22");
+            label22.Name = "label22";
+            // 
+            // button2
+            // 
+            resources.ApplyResources(button2, "button2");
+            button2.Name = "button2";
+            button2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(label16);
             Controls.Add(tab_con);
             Controls.Add(btn_connect);
             Controls.Add(label4);
@@ -455,6 +527,8 @@
             tabPage2.ResumeLayout(false);
             gb_main.ResumeLayout(false);
             gb_main.PerformLayout();
+            tabPage3.ResumeLayout(false);
+            tabPage3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -509,7 +583,17 @@
         private TextBox tb_yr_to_move;
         private Button btn_yr_tare;
         private Label label15;
+        private TabPage tabPage3;
+        private Label label16;
+        private Label label22;
+        private Label label21;
+        private Label label20;
         private TextBox textBox1;
-        private TextBox textBox2;
+        private Label label19;
+        private Label lb_cail_yard;
+        private Label lb_pulse;
+        private Label label18;
+        private Label label17;
+        private Button button2;
     }
 }

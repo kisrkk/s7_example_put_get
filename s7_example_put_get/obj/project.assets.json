@@ -137,6 +137,33 @@
           }
         }
       },
+      "SQLite/3.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libsqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/libsqlite3.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win7-x64/native/sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win7-x64"
+          },
+          "runtimes/win7-x86/native/sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win7-x86"
+          }
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "type": "package",
         "compile": {
@@ -367,6 +394,27 @@
         "s7netplus.nuspec"
       ]
     },
+    "SQLite/3.13.0": {
+      "sha512": "MJfRiz2p6aMVOxrxGMdVzhpzI0oxTgZSwC8eVuOpV8L7yYaFUu8q/OFYwv9P0/aZ/pdEu24O6gma6wZJMTun9A==",
+      "type": "package",
+      "path": "sqlite/3.13.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net45/SQLite.props",
+        "lib/netstandard1.0/_._",
+        "runtimes/linux-x64/native/libsqlite3.so",
+        "runtimes/osx-x64/native/libsqlite3.dylib",
+        "runtimes/win10-arm/nativeassets/uap10.0/sqlite3.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/sqlite3.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/sqlite3.dll",
+        "runtimes/win7-x64/native/sqlite3.dll",
+        "runtimes/win7-x86/native/sqlite3.dll",
+        "sqlite-version.txt",
+        "sqlite.3.13.0.nupkg.sha512",
+        "sqlite.nuspec"
+      ]
+    },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "sha512": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "type": "package",
@@ -396,23 +444,29 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "Microsoft.AspNetCore.Components >= 6.0.19",
-      "S7netplus >= 0.19.0"
+      "S7netplus >= 0.19.0",
+      "SQLite >= 3.13.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\CPL\\.nuget\\packages\\": {}
+    "C:\\Users\\KISR\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CPL\\Documents\\GitHub\\s7_example_put_get\\s7_example_put_get\\s7_example_put_get.csproj",
+      "projectUniqueName": "C:\\Users\\KISR\\Documents\\Github\\s7_example_put_get\\s7_example_put_get\\s7_example_put_get.csproj",
       "projectName": "s7_example_put_get",
-      "projectPath": "C:\\Users\\CPL\\Documents\\GitHub\\s7_example_put_get\\s7_example_put_get\\s7_example_put_get.csproj",
-      "packagesPath": "C:\\Users\\CPL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CPL\\Documents\\GitHub\\s7_example_put_get\\s7_example_put_get\\obj\\",
+      "projectPath": "C:\\Users\\KISR\\Documents\\Github\\s7_example_put_get\\s7_example_put_get\\s7_example_put_get.csproj",
+      "packagesPath": "C:\\Users\\KISR\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\KISR\\Documents\\Github\\s7_example_put_get\\s7_example_put_get\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\CPL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\KISR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -445,6 +499,10 @@
           "S7netplus": {
             "target": "Package",
             "version": "[0.19.0, )"
+          },
+          "SQLite": {
+            "target": "Package",
+            "version": "[3.13.0, )"
           }
         },
         "imports": [
@@ -466,7 +524,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
