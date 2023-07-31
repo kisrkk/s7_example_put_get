@@ -77,6 +77,8 @@
             btn_read_data = new Button();
             tb_read_db = new TextBox();
             label5 = new Label();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
             tab_con.SuspendLayout();
             tabPage1.SuspendLayout();
             GB_control.SuspendLayout();
@@ -253,7 +255,8 @@
             resources.ApplyResources(btn_m1_cw, "btn_m1_cw");
             btn_m1_cw.Name = "btn_m1_cw";
             btn_m1_cw.UseVisualStyleBackColor = true;
-            btn_m1_cw.MouseDown += btn_m1_cw_MouseUp;
+            btn_m1_cw.Click += btn_m1_cw_Click;
+            btn_m1_cw.MouseDown += btn_m1_cw_MouseDown;
             btn_m1_cw.MouseUp += btn_m1_cw_MouseUp;
             // 
             // tb_history
@@ -411,10 +414,23 @@
             resources.ApplyResources(label5, "label5");
             label5.Name = "label5";
             // 
+            // textBox1
+            // 
+            resources.ApplyResources(textBox1, "textBox1");
+            textBox1.ForeColor = Color.FromArgb(192, 0, 0);
+            textBox1.Name = "textBox1";
+            // 
+            // textBox2
+            // 
+            resources.ApplyResources(textBox2, "textBox2");
+            textBox2.Name = "textBox2";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
             Controls.Add(tab_con);
             Controls.Add(btn_connect);
             Controls.Add(label4);
@@ -428,6 +444,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form1";
+            WindowState = FormWindowState.Maximized;
             FormClosing += Form1_FormClosing;
             Load += Form1_Load;
             tab_con.ResumeLayout(false);
@@ -492,5 +509,7 @@
         private TextBox tb_yr_to_move;
         private Button btn_yr_tare;
         private Label label15;
+        private TextBox textBox1;
+        private TextBox textBox2;
     }
 }

@@ -74,20 +74,23 @@ namespace s7_example_put_get
             double target_to_move = 0.00f;
             try
             {
-                target_to_move = double.Parse(tb_yr_to_move.Text); 
+                target_to_move = double.Parse(tb_yr_to_move.Text);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Invaild Data ");
             }
 
-            if (target_to_move >= read_real("DB1","16.0")) {
+            if (start_cal_to_yr && (target_to_move >= read_real("DB1", "16.0")))
+            {
                 btn_move_yr.Text = "Moving";
                 write_bool("DB1", "28.0", false);
                 write_bool("DB1", "28.1", true);
                 write_bool("DB1", "28.2", false);
                 write_bool("DB1", "28.3", true);
-            } else {
+            }
+            else
+            {
                 btn_move_yr.Text = "Move yr";
                 write_bool("DB1", "28.1", false);
                 write_bool("DB1", "28.3", false);
@@ -354,8 +357,8 @@ namespace s7_example_put_get
 
         private void btn_m1_ccw_MouseDown(object sender, MouseEventArgs e)
         {
-            write_bool("DB1", "28.0", true);
             write_bool("DB1", "28.1", true);
+            write_bool("DB1", "28.0", true);
         }
 
         private void btn_m1_ccw_MouseUp(object sender, MouseEventArgs e)
@@ -433,12 +436,12 @@ namespace s7_example_put_get
         private void btn_move_yr_Click(object sender, EventArgs e)
         {
             if (!start_cal_to_yr)
-            { 
-                Start_to_yr_task(); 
+            {
+                Start_to_yr_task();
             }
             else
             {
-                Stop_to_yr_task() ;
+                Stop_to_yr_task();
             }
         }
 
@@ -448,11 +451,6 @@ namespace s7_example_put_get
         }
 
         private void btn_yr_tare_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_on_off_cutter_Click(object sender, EventArgs e)
         {
 
         }
@@ -471,6 +469,11 @@ namespace s7_example_put_get
             {
                 write_bool("DB1", "40.5", false);
             }
+        }
+
+        private void btn_m1_cw_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
