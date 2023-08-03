@@ -40,7 +40,9 @@
             btn_connect = new Button();
             tab_con = new TabControl();
             tabPage1 = new TabPage();
+            pb_connect = new ProgressBar();
             GB_control = new GroupBox();
+            btn_cycle_cut = new Button();
             btn_yr_tare = new Button();
             label15 = new Label();
             lb_yr_en = new Label();
@@ -77,18 +79,18 @@
             btn_read_data = new Button();
             tb_read_db = new TextBox();
             label5 = new Label();
-            label16 = new Label();
             tabPage3 = new TabPage();
-            label17 = new Label();
-            label18 = new Label();
-            lb_pulse = new Label();
-            lb_cail_yard = new Label();
-            label19 = new Label();
-            textBox1 = new TextBox();
-            label20 = new Label();
-            label21 = new Label();
-            label22 = new Label();
             button2 = new Button();
+            label22 = new Label();
+            label21 = new Label();
+            label20 = new Label();
+            tb_calculation_value = new TextBox();
+            label19 = new Label();
+            lb_cail_yard = new Label();
+            lb_pulse = new Label();
+            label18 = new Label();
+            label17 = new Label();
+            lb_date = new Label();
             tab_con.SuspendLayout();
             tabPage1.SuspendLayout();
             GB_control.SuspendLayout();
@@ -157,6 +159,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(pb_connect);
             tabPage1.Controls.Add(GB_control);
             tabPage1.Controls.Add(tb_history);
             tabPage1.Controls.Add(btn_enable);
@@ -164,8 +167,14 @@
             tabPage1.Name = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pb_connect
+            // 
+            resources.ApplyResources(pb_connect, "pb_connect");
+            pb_connect.Name = "pb_connect";
+            // 
             // GB_control
             // 
+            GB_control.Controls.Add(btn_cycle_cut);
             GB_control.Controls.Add(btn_yr_tare);
             GB_control.Controls.Add(label15);
             GB_control.Controls.Add(lb_yr_en);
@@ -182,11 +191,21 @@
             GB_control.Name = "GB_control";
             GB_control.TabStop = false;
             // 
+            // btn_cycle_cut
+            // 
+            btn_cycle_cut.BackColor = Color.GhostWhite;
+            resources.ApplyResources(btn_cycle_cut, "btn_cycle_cut");
+            btn_cycle_cut.Name = "btn_cycle_cut";
+            btn_cycle_cut.UseVisualStyleBackColor = false;
+            btn_cycle_cut.Click += btn_cycle_cut_Click;
+            // 
             // btn_yr_tare
             // 
+            btn_yr_tare.BackColor = Color.Pink;
             resources.ApplyResources(btn_yr_tare, "btn_yr_tare");
+            btn_yr_tare.ForeColor = Color.Red;
             btn_yr_tare.Name = "btn_yr_tare";
-            btn_yr_tare.UseVisualStyleBackColor = true;
+            btn_yr_tare.UseVisualStyleBackColor = false;
             btn_yr_tare.Click += btn_yr_tare_Click;
             btn_yr_tare.MouseDown += btn_yr_tare_MouseDown;
             btn_yr_tare.MouseUp += btn_yr_tare_MouseUp;
@@ -204,9 +223,10 @@
             // 
             // btn_move_yr
             // 
+            btn_move_yr.BackColor = Color.Chartreuse;
             resources.ApplyResources(btn_move_yr, "btn_move_yr");
             btn_move_yr.Name = "btn_move_yr";
-            btn_move_yr.UseVisualStyleBackColor = true;
+            btn_move_yr.UseVisualStyleBackColor = false;
             btn_move_yr.Click += btn_move_yr_Click;
             // 
             // tb_yr_to_move
@@ -426,18 +446,13 @@
             resources.ApplyResources(label5, "label5");
             label5.Name = "label5";
             // 
-            // label16
-            // 
-            resources.ApplyResources(label16, "label16");
-            label16.Name = "label16";
-            // 
             // tabPage3
             // 
             tabPage3.Controls.Add(button2);
             tabPage3.Controls.Add(label22);
             tabPage3.Controls.Add(label21);
             tabPage3.Controls.Add(label20);
-            tabPage3.Controls.Add(textBox1);
+            tabPage3.Controls.Add(tb_calculation_value);
             tabPage3.Controls.Add(label19);
             tabPage3.Controls.Add(lb_cail_yard);
             tabPage3.Controls.Add(lb_pulse);
@@ -447,62 +462,68 @@
             tabPage3.Name = "tabPage3";
             tabPage3.UseVisualStyleBackColor = true;
             // 
-            // label17
+            // button2
             // 
-            resources.ApplyResources(label17, "label17");
-            label17.Name = "label17";
-            // 
-            // label18
-            // 
-            resources.ApplyResources(label18, "label18");
-            label18.Name = "label18";
-            // 
-            // lb_pulse
-            // 
-            resources.ApplyResources(lb_pulse, "lb_pulse");
-            lb_pulse.Name = "lb_pulse";
-            // 
-            // lb_cail_yard
-            // 
-            resources.ApplyResources(lb_cail_yard, "lb_cail_yard");
-            lb_cail_yard.Name = "lb_cail_yard";
-            // 
-            // label19
-            // 
-            resources.ApplyResources(label19, "label19");
-            label19.Name = "label19";
-            // 
-            // textBox1
-            // 
-            resources.ApplyResources(textBox1, "textBox1");
-            textBox1.Name = "textBox1";
-            // 
-            // label20
-            // 
-            resources.ApplyResources(label20, "label20");
-            label20.Name = "label20";
-            // 
-            // label21
-            // 
-            resources.ApplyResources(label21, "label21");
-            label21.Name = "label21";
+            resources.ApplyResources(button2, "button2");
+            button2.Name = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label22
             // 
             resources.ApplyResources(label22, "label22");
             label22.Name = "label22";
             // 
-            // button2
+            // label21
             // 
-            resources.ApplyResources(button2, "button2");
-            button2.Name = "button2";
-            button2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(label21, "label21");
+            label21.Name = "label21";
+            // 
+            // label20
+            // 
+            resources.ApplyResources(label20, "label20");
+            label20.Name = "label20";
+            // 
+            // tb_calculation_value
+            // 
+            resources.ApplyResources(tb_calculation_value, "tb_calculation_value");
+            tb_calculation_value.Name = "tb_calculation_value";
+            // 
+            // label19
+            // 
+            resources.ApplyResources(label19, "label19");
+            label19.Name = "label19";
+            // 
+            // lb_cail_yard
+            // 
+            resources.ApplyResources(lb_cail_yard, "lb_cail_yard");
+            lb_cail_yard.Name = "lb_cail_yard";
+            // 
+            // lb_pulse
+            // 
+            resources.ApplyResources(lb_pulse, "lb_pulse");
+            lb_pulse.Name = "lb_pulse";
+            // 
+            // label18
+            // 
+            resources.ApplyResources(label18, "label18");
+            label18.Name = "label18";
+            // 
+            // label17
+            // 
+            resources.ApplyResources(label17, "label17");
+            label17.Name = "label17";
+            // 
+            // lb_date
+            // 
+            resources.ApplyResources(lb_date, "lb_date");
+            lb_date.Name = "lb_date";
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label16);
+            Controls.Add(lb_date);
             Controls.Add(tab_con);
             Controls.Add(btn_connect);
             Controls.Add(label4);
@@ -584,16 +605,18 @@
         private Button btn_yr_tare;
         private Label label15;
         private TabPage tabPage3;
-        private Label label16;
+        private Label lb_date;
         private Label label22;
         private Label label21;
         private Label label20;
-        private TextBox textBox1;
+        private TextBox tb_calculation_value;
         private Label label19;
         private Label lb_cail_yard;
         private Label lb_pulse;
         private Label label18;
         private Label label17;
         private Button button2;
+        private ProgressBar pb_connect;
+        private Button btn_cycle_cut;
     }
 }

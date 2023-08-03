@@ -1,9 +1,12 @@
 using Microsoft.AspNetCore.Components;
+
 using S7.Net;
+using S7.Net.Types;
 using System.Diagnostics.Eventing.Reader;
 using System.Net;
 using System.Numerics;
 using System.Threading;
+
 
 namespace s7_example_put_get
 {
@@ -15,15 +18,47 @@ namespace s7_example_put_get
         private Plc plc;
         System.Windows.Forms.Timer Task_toRead_data = new System.Windows.Forms.Timer();
         System.Windows.Forms.Timer Task_to_yr = new System.Windows.Forms.Timer();
+        System.Windows.Forms.Timer Task_Time = new System.Windows.Forms.Timer();
+        private int pb_value = 0;
         private bool start_cal_to_yr = false;
-
+        private double calculation_value = 1;
+        private double current_yr = 0.00f;
+        private double current_pulse = 0.00f;
+        const int task_interval = 200;
+        bool cutting = false;
+        bool cutDone = false;
+        bool cutHome = false;
         public Form1()
         {
             InitializeComponent();
-            tab_con.Enabled = isConnect;
-            GB_control.Enabled = auto_overide_enable;
-        }
+            try
+            {
+                calculation_value = YAMLHelper.ReadCalculationData();
+                if (calculation_value <= 0)
+                {
+                    calculation_value = 1;
+                    YAMLHelper.SaveCalculationData(calculation_value);
+                }
+            }
+            catch (Exception ex)
+            {
+                calculation_value = 1;
+            }
 
+            System.DateTime current_time = System.DateTime.Now;
+            lb_date.Text = current_time.ToString("dd/MM/yyyy HH:mm:ss");
+            tab_con.Enabled = isConnect;
+            tb_calculation_value.Text = calculation_value.ToString();
+            GB_control.Enabled = auto_overide_enable;
+            Task_Time.Tick += new EventHandler(Task_Time_callback);
+            Task_Time.Interval = 1000;
+            Task_Time.Start();
+        }
+        private void Task_Time_callback(object sender, EventArgs e)
+        {
+            System.DateTime current_time = System.DateTime.Now;
+            lb_date.Text = current_time.ToString("dd/MM/yyyy HH:mm:ss");
+        }
         bool init_connection(CpuType plc_type, IPAddress plc_ip, short plc_rack_no, short plc_slot_no)
         {
 
@@ -42,6 +77,11 @@ namespace s7_example_put_get
 
         }
 
+        private double calculation()
+        {
+            return current_pulse / calculation_value;
+        }
+
         private void Task_toRead_data_callback(object sender, EventArgs e)
         {
             if (!auto_overide_enable)
@@ -49,14 +89,60 @@ namespace s7_example_put_get
                 Task_toRead_data.Dispose();
                 return;
             }
-            lb_yr_en.Text = read_real("DB1", "16.0").ToString("0.00");
+            pb_value += 25;
+            pb_connect.Value = pb_value;
+            if (pb_value >= 100)
+            {
+                pb_value = 0;
+            }
+            current_pulse = read_real("DB1", "16.0");
+            current_yr = calculation();
+             cutting = read_bool("DB1", "28.4");
+             cutDone = read_bool("DB1", "28.5");
+             cutHome = read_bool("DB1", "28.6");
+            if (cutting && (cutDone == false) && (cutHome == false))
+            {
+                btn_cycle_cut.Text = "Cutting";
+                btn_cycle_cut.Enabled = false;
+            }
+
+            else if ((cutting == false) && (cutDone == true) && (cutHome == false))
+            {
+                btn_cycle_cut.Text = "Go to home";
+                btn_cycle_cut.Enabled = false;
+            }
+
+            else if ((cutting == false) && (cutDone == false) && (cutHome == true))
+            {
+                btn_cycle_cut.Text = "Home";
+                btn_cycle_cut.Enabled = false;
+            }
+            else {
+                btn_cycle_cut.Text = "CUT";
+                btn_cycle_cut.Enabled = false;
+            }
+
+            lb_pulse.Text = current_pulse.ToString("0");
+            lb_cail_yard.Text = current_yr.ToString("0.00000");
+            if (current_yr <= 0.01)
+            {
+                lb_yr_en.Text = current_yr.ToString("0.00000");
+            }
+            else if (current_yr <= 0.1)
+            {
+                lb_yr_en.Text = current_yr.ToString("0.000");
+            }
+            else
+            {
+                lb_yr_en.Text = current_yr.ToString("0.00");
+            }
+
         }
 
         private void StartRead_task()
         {
-            //Task_toRead_data = new System.Threading.Timer(Task_toRead_data_callback, null, 0, 1000);
             Task_toRead_data.Tick += new EventHandler(Task_toRead_data_callback);
-            Task_toRead_data.Interval = 1000;
+            Task_toRead_data.Interval = task_interval * 2;
             Task_toRead_data.Start();
         }
         private void StopRead_task()
@@ -75,43 +161,66 @@ namespace s7_example_put_get
             try
             {
                 target_to_move = double.Parse(tb_yr_to_move.Text);
+                if (start_cal_to_yr && (target_to_move >= current_yr))
+                {
+                    start_moving();
+                }
+                else
+                {
+                    stop_moving();
+                    btn_cycle_cut.Enabled = true;
+                    btn_cycle_cut.Text = "CUT";
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Invaild Data ");
+                MessageBox.Show(ex.Message, "Error");
             }
+        }
 
-            if (start_cal_to_yr && (target_to_move >= read_real("DB1", "16.0")))
+        private void start_moving()
+        {
+            if (auto_overide_enable)
             {
-                btn_move_yr.Text = "Moving";
-                write_bool("DB1", "28.0", false);
-                write_bool("DB1", "28.1", true);
-                write_bool("DB1", "28.2", false);
-                write_bool("DB1", "28.3", true);
+                write_bool("DB1", "40.5", false);
             }
-            else
-            {
-                btn_move_yr.Text = "Move yr";
-                write_bool("DB1", "28.1", false);
-                write_bool("DB1", "28.3", false);
-                Task_toRead_data.Dispose();
-                start_cal_to_yr = false;
-                return;
-            }
+            btn_move_yr.Text = "Moving";
+            btn_move_yr.ForeColor = Color.White;
+            btn_move_yr.BackColor = Color.Blue;
+            btn_yr_tare.Text = "Stop/Reset";
+            write_bool("DB1", "28.0", false);
+            write_bool("DB1", "28.1", true);
+            write_bool("DB1", "28.2", false);
+            write_bool("DB1", "28.3", true);
+        }
+
+        private void stop_moving()
+        {
+            btn_yr_tare.Text = "Reset";
+            btn_move_yr.Text = "Start";
+            btn_move_yr.ForeColor = Color.Black;
+            btn_move_yr.BackColor = Color.Chartreuse;
+            write_bool("DB1", "28.1", false);
+            write_bool("DB1", "28.3", false);
+            Task_to_yr.Dispose();
+            Task_to_yr.Stop();
+            start_cal_to_yr = false;
         }
 
         private void Start_to_yr_task()
         {
             start_cal_to_yr = true;
-            //Task_toRead_data = new System.Threading.Timer(Task_toRead_data_callback, null, 0, 1000);
             Task_to_yr.Tick += new EventHandler(Task_to_yr_task_callback);
-            Task_to_yr.Interval = 1000;
+            Task_to_yr.Interval = task_interval;
             Task_to_yr.Start();
         }
         private void Stop_to_yr_task()
         {
             start_cal_to_yr = false;
-            btn_move_yr.Text = "Move yr";
+            btn_move_yr.Text = "Resume";
+            btn_move_yr.ForeColor = Color.Black;
+            btn_move_yr.BackColor = Color.Yellow;
+
             write_bool("DB1", "28.1", false);
             write_bool("DB1", "28.3", false);
             Task_to_yr.Stop();
@@ -261,6 +370,26 @@ namespace s7_example_put_get
             tb_history.Text = str_history;
         }
 
+        void write_real(string data_block, string data_address, double data)
+        {
+            string con = "";
+            con += data_block;
+            try
+            {
+                con += ".DBD";
+                con += data_address;
+                //str_history += "Write " + data.ToString() + " to " + con + "\r\n";
+                str_history = "MOVE " + data.ToString() + " to " + con + "\r\n" + str_history;
+                plc.Write(con, data);
+            }
+            catch (Exception ex)
+            {
+                str_history += "Write Error " + ex.Message + "\r\n";
+                MessageBox.Show(ex.Message, "Error");
+            }
+            tb_history.Text = str_history;
+        }
+
         double read_real(string data_block, string data_address)
         {
             double real = 0.0f;
@@ -283,6 +412,27 @@ namespace s7_example_put_get
             return real;
         }
 
+
+        bool read_bool(string data_block, string data_address)
+        {
+            bool real = false;
+            string con = "";
+            con += data_block;
+            try
+            {
+                con += ".DBX";
+                con += data_address;
+                //str_history += "Write " + data.ToString() + " to " + con + "\r\n";
+                real = (bool)(plc.Read(con));
+            }
+            catch (Exception ex)
+            {
+                str_history += "Read Error " + ex.Message + "\r\n";
+                MessageBox.Show(ex.Message, "Error");
+            }
+
+            return real;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -431,18 +581,50 @@ namespace s7_example_put_get
             {
                 write_bool("DB1", "40.0", false);
             }
+            Task_Time.Stop();
+            Task_toRead_data.Stop();
+            Task_to_yr.Stop();
         }
 
         private void btn_move_yr_Click(object sender, EventArgs e)
         {
-            if (!start_cal_to_yr)
+            double target_to_move = 0.00f;
+            try
             {
-                Start_to_yr_task();
+                target_to_move = double.Parse(tb_yr_to_move.Text);
+                if ((target_to_move >= current_yr))
+                {
+                    if (!start_cal_to_yr)
+                    {
+                        Start_to_yr_task();
+                    }
+                    else
+                    {
+                        Stop_to_yr_task();
+                    }
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Current length is on setting. Do you want to reset the setting parameter?", "Setting Parameter Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        tb_yr_to_move.Text = "0.00";
+                        write_real("DB1", "16.0", 0.0);
+                    }
+                    else
+                    {
+                        return;
+                    }
+
+                }
             }
-            else
+            catch (Exception ex)
             {
-                Stop_to_yr_task();
+                MessageBox.Show(ex.Message, "Error");
             }
+
+
         }
 
         private void lb_yr_en_Click(object sender, EventArgs e)
@@ -452,28 +634,73 @@ namespace s7_example_put_get
 
         private void btn_yr_tare_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Do you want to stop and reset current job?", "Warning abort work", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
+            if (result == DialogResult.Yes)
+            {
+
+                write_real("DB1", "16.0", 0.0);
+                if (start_cal_to_yr)
+                {
+                    stop_moving();
+                    if (auto_overide_enable)
+                    {
+                        write_bool("DB1", "40.5", true);
+                    }
+                }
+                else
+                {
+                    return;
+                }
+                btn_move_yr.Text = "Start";
+                btn_move_yr.ForeColor = Color.Black;
+                btn_move_yr.BackColor = Color.Chartreuse;
+                btn_cycle_cut.Enabled = false;
+                write_bool("DB1", "28.4", false);
+            }
         }
 
         private void btn_yr_tare_MouseDown(object sender, MouseEventArgs e)
         {
-            if (auto_overide_enable)
-            {
-                write_bool("DB1", "40.5", true);
-            }
+
         }
 
         private void btn_yr_tare_MouseUp(object sender, MouseEventArgs e)
         {
-            if (auto_overide_enable)
-            {
-                write_bool("DB1", "40.5", false);
-            }
+
         }
 
         private void btn_m1_cw_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            calculation_value = 1;
+            try
+            {
+                calculation_value = double.Parse(tb_calculation_value.Text);
+                if (calculation_value <= 0)
+                {
+                    calculation_value = 1;
+                }
+                YAMLHelper.SaveCalculationData(calculation_value);
+            }
+            catch (Exception ex)
+            {
+                calculation_value = 1;
+                MessageBox.Show(ex.Message, "Parse Parameter Error");
+            }
+
+        }
+
+        private void btn_cycle_cut_Click(object sender, EventArgs e)
+        {
+            if (auto_overide_enable)
+            {
+                write_bool("DB1", "28.4", true);
+            }
         }
     }
 }

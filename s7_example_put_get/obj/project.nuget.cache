@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fP6WwC6u+4qdVBbJNJtkSDn+Hg0XbloNQZmR30cYoZ2nEY5Kp7OAsGN0D73cD44vAvjR5sXgHn0OvQU4l8Ti9w==",
+  "dgSpecHash": "6BGmQsdDOBg6z9EBcItkkBAJjmgIZMZeg6nKu6EMm5s9V8B7dEBUFI20ZVlhsd+LS2eVhnf/dYhgTde0F67caA==",
   "success": true,
   "projectFilePath": "C:\\Users\\KISR\\Documents\\Github\\s7_example_put_get\\s7_example_put_get\\s7_example_put_get.csproj",
   "expectedPackageFiles": [
@@ -14,7 +14,8 @@
     "C:\\Users\\KISR\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\KISR\\.nuget\\packages\\s7netplus\\0.19.0\\s7netplus.0.19.0.nupkg.sha512",
     "C:\\Users\\KISR\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512",
-    "C:\\Users\\KISR\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\KISR\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\KISR\\.nuget\\packages\\yamldotnet\\13.1.1\\yamldotnet.13.1.1.nupkg.sha512"
   ],
   "logs": []
 }

@@ -64,3 +64,16 @@ C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\obj\Debug\ne
 C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\obj\Debug\net6.0-windows\s7_example_put_get.pdb
 C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\obj\Debug\net6.0-windows\s7_example_put_get.genruntimeconfig.cache
 C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\obj\Debug\net6.0-windows\ref\s7_example_put_get.dll
+C:\Users\KISR\Documents\Github\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\Microsoft.AspNetCore.Authorization.dll
+C:\Users\KISR\Documents\Github\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\Microsoft.AspNetCore.Components.dll
+C:\Users\KISR\Documents\Github\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\Microsoft.AspNetCore.Metadata.dll
+C:\Users\KISR\Documents\Github\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\KISR\Documents\Github\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\KISR\Documents\Github\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\KISR\Documents\Github\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\KISR\Documents\Github\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\runtimes\linux-x64\native\libsqlite3.so
+C:\Users\KISR\Documents\Github\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\runtimes\osx-x64\native\libsqlite3.dylib
+C:\Users\KISR\Documents\Github\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\runtimes\win7-x64\native\sqlite3.dll
+C:\Users\KISR\Documents\Github\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\runtimes\win7-x86\native\sqlite3.dll
+C:\Users\KISR\Documents\Github\s7_example_put_get\s7_example_put_get\obj\Debug\net6.0-windows\s7_example_put_get.Properties.Resources.resources
+C:\Users\KISR\Documents\Github\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\YamlDotNet.dll

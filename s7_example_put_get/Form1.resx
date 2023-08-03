@@ -309,384 +309,74 @@
   <data name="&gt;&gt;btn_connect.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="btn_yr_tare.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt</value>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btn_yr_tare.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btn_yr_tare.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 255</value>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>tab_con</value>
   </data>
-  <data name="btn_yr_tare.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 34</value>
-  </data>
-  <data name="btn_yr_tare.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="btn_yr_tare.Text" xml:space="preserve">
-    <value>Tare</value>
-  </data>
-  <data name="&gt;&gt;btn_yr_tare.Name" xml:space="preserve">
-    <value>btn_yr_tare</value>
-  </data>
-  <data name="&gt;&gt;btn_yr_tare.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_yr_tare.Parent" xml:space="preserve">
-    <value>GB_control</value>
-  </data>
-  <data name="&gt;&gt;btn_yr_tare.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
   </data>
-  <data name="label15.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 18pt</value>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tab_con</value>
   </data>
-  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>110, 255</value>
-  </data>
-  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 32</value>
-  </data>
-  <data name="label15.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="label15.Text" xml:space="preserve">
-    <value>หลา</value>
-  </data>
-  <data name="&gt;&gt;label15.Name" xml:space="preserve">
-    <value>label15</value>
-  </data>
-  <data name="&gt;&gt;label15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
-    <value>GB_control</value>
-  </data>
-  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lb_yr_en.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
   </data>
-  <data name="lb_yr_en.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 18pt</value>
+  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lb_yr_en.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
+    <value>tab_con</value>
   </data>
-  <data name="lb_yr_en.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 255</value>
-  </data>
-  <data name="lb_yr_en.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 32</value>
-  </data>
-  <data name="lb_yr_en.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="lb_yr_en.Text" xml:space="preserve">
-    <value>0.00</value>
-  </data>
-  <data name="&gt;&gt;lb_yr_en.Name" xml:space="preserve">
-    <value>lb_yr_en</value>
-  </data>
-  <data name="&gt;&gt;lb_yr_en.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lb_yr_en.Parent" xml:space="preserve">
-    <value>GB_control</value>
-  </data>
-  <data name="&gt;&gt;lb_yr_en.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="btn_move_yr.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 18pt</value>
+  <data name="tab_con.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 38</value>
   </data>
-  <data name="btn_move_yr.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="tab_con.Size" type="System.Drawing.Size, System.Drawing">
+    <value>762, 391</value>
   </data>
-  <data name="btn_move_yr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 210</value>
-  </data>
-  <data name="btn_move_yr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 39</value>
-  </data>
-  <data name="btn_move_yr.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="btn_move_yr.Text" xml:space="preserve">
-    <value>Move yr</value>
-  </data>
-  <data name="&gt;&gt;btn_move_yr.Name" xml:space="preserve">
-    <value>btn_move_yr</value>
-  </data>
-  <data name="&gt;&gt;btn_move_yr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_move_yr.Parent" xml:space="preserve">
-    <value>GB_control</value>
-  </data>
-  <data name="&gt;&gt;btn_move_yr.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="tb_yr_to_move.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 18pt</value>
-  </data>
-  <data name="tb_yr_to_move.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 210</value>
-  </data>
-  <data name="tb_yr_to_move.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="tb_yr_to_move.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 39</value>
-  </data>
-  <data name="tb_yr_to_move.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="tb_yr_to_move.Text" xml:space="preserve">
-    <value>0.0</value>
-  </data>
-  <data name="&gt;&gt;tb_yr_to_move.Name" xml:space="preserve">
-    <value>tb_yr_to_move</value>
-  </data>
-  <data name="&gt;&gt;tb_yr_to_move.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tb_yr_to_move.Parent" xml:space="preserve">
-    <value>GB_control</value>
-  </data>
-  <data name="&gt;&gt;tb_yr_to_move.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btn_on_off_cutter.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 18pt</value>
-  </data>
-  <data name="btn_on_off_cutter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btn_on_off_cutter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 163</value>
-  </data>
-  <data name="btn_on_off_cutter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>275, 42</value>
-  </data>
-  <data name="btn_on_off_cutter.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="btn_on_off_cutter.Text" xml:space="preserve">
-    <value>ON/OFF CUTTER</value>
-  </data>
-  <data name="&gt;&gt;btn_on_off_cutter.Name" xml:space="preserve">
-    <value>btn_on_off_cutter</value>
-  </data>
-  <data name="&gt;&gt;btn_on_off_cutter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_on_off_cutter.Parent" xml:space="preserve">
-    <value>GB_control</value>
-  </data>
-  <data name="&gt;&gt;btn_on_off_cutter.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="btn_m3_down.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 18pt</value>
-  </data>
-  <data name="btn_m3_down.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btn_m3_down.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 115</value>
-  </data>
-  <data name="btn_m3_down.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 42</value>
-  </data>
-  <data name="btn_m3_down.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="btn_m3_down.Text" xml:space="preserve">
-    <value>M3 DOWN</value>
-  </data>
-  <data name="&gt;&gt;btn_m3_down.Name" xml:space="preserve">
-    <value>btn_m3_down</value>
-  </data>
-  <data name="&gt;&gt;btn_m3_down.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_m3_down.Parent" xml:space="preserve">
-    <value>GB_control</value>
-  </data>
-  <data name="&gt;&gt;btn_m3_down.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="btn_m3_up.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 18pt</value>
-  </data>
-  <data name="btn_m3_up.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btn_m3_up.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 115</value>
-  </data>
-  <data name="btn_m3_up.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 42</value>
-  </data>
-  <data name="btn_m3_up.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="btn_m3_up.Text" xml:space="preserve">
-    <value>M3 UP</value>
-  </data>
-  <data name="&gt;&gt;btn_m3_up.Name" xml:space="preserve">
-    <value>btn_m3_up</value>
-  </data>
-  <data name="&gt;&gt;btn_m3_up.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_m3_up.Parent" xml:space="preserve">
-    <value>GB_control</value>
-  </data>
-  <data name="&gt;&gt;btn_m3_up.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="btn_m2_ccw.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 18pt</value>
-  </data>
-  <data name="btn_m2_ccw.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btn_m2_ccw.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 67</value>
-  </data>
-  <data name="btn_m2_ccw.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 42</value>
-  </data>
-  <data name="btn_m2_ccw.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="btn_m2_ccw.Text" xml:space="preserve">
-    <value>M2 CCW</value>
-  </data>
-  <data name="&gt;&gt;btn_m2_ccw.Name" xml:space="preserve">
-    <value>btn_m2_ccw</value>
-  </data>
-  <data name="&gt;&gt;btn_m2_ccw.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_m2_ccw.Parent" xml:space="preserve">
-    <value>GB_control</value>
-  </data>
-  <data name="&gt;&gt;btn_m2_ccw.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="btn_m2_cw.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 18pt</value>
-  </data>
-  <data name="btn_m2_cw.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btn_m2_cw.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 67</value>
-  </data>
-  <data name="btn_m2_cw.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 42</value>
-  </data>
-  <data name="btn_m2_cw.TabIndex" type="System.Int32, mscorlib">
+  <data name="tab_con.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="btn_m2_cw.Text" xml:space="preserve">
-    <value>M2 CW</value>
+  <data name="&gt;&gt;tab_con.Name" xml:space="preserve">
+    <value>tab_con</value>
   </data>
-  <data name="&gt;&gt;btn_m2_cw.Name" xml:space="preserve">
-    <value>btn_m2_cw</value>
+  <data name="&gt;&gt;tab_con.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btn_m2_cw.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;tab_con.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;btn_m2_cw.Parent" xml:space="preserve">
-    <value>GB_control</value>
+  <data name="&gt;&gt;tab_con.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;btn_m2_cw.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="&gt;&gt;pb_connect.Name" xml:space="preserve">
+    <value>pb_connect</value>
   </data>
-  <data name="btn_m1_ccw.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 18pt</value>
+  <data name="&gt;&gt;pb_connect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btn_m1_ccw.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;pb_connect.Parent" xml:space="preserve">
+    <value>tabPage1</value>
   </data>
-  <data name="btn_m1_ccw.Location" type="System.Drawing.Point, System.Drawing">
-    <value>137, 22</value>
-  </data>
-  <data name="btn_m1_ccw.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 39</value>
-  </data>
-  <data name="btn_m1_ccw.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="btn_m1_ccw.Text" xml:space="preserve">
-    <value>M1 CCW</value>
-  </data>
-  <data name="&gt;&gt;btn_m1_ccw.Name" xml:space="preserve">
-    <value>btn_m1_ccw</value>
-  </data>
-  <data name="&gt;&gt;btn_m1_ccw.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_m1_ccw.Parent" xml:space="preserve">
-    <value>GB_control</value>
-  </data>
-  <data name="&gt;&gt;btn_m1_ccw.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="btn_m1_cw.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 18pt</value>
-  </data>
-  <data name="btn_m1_cw.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btn_m1_cw.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 22</value>
-  </data>
-  <data name="btn_m1_cw.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 39</value>
-  </data>
-  <data name="btn_m1_cw.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="btn_m1_cw.Text" xml:space="preserve">
-    <value>M1 CW</value>
-  </data>
-  <data name="&gt;&gt;btn_m1_cw.Name" xml:space="preserve">
-    <value>btn_m1_cw</value>
-  </data>
-  <data name="&gt;&gt;btn_m1_cw.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_m1_cw.Parent" xml:space="preserve">
-    <value>GB_control</value>
-  </data>
-  <data name="&gt;&gt;btn_m1_cw.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="GB_control.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 62</value>
-  </data>
-  <data name="GB_control.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 295</value>
-  </data>
-  <data name="GB_control.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="GB_control.Text" xml:space="preserve">
-    <value>BTN</value>
+  <data name="&gt;&gt;pb_connect.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;GB_control.Name" xml:space="preserve">
     <value>GB_control</value>
@@ -698,22 +388,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;GB_control.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tb_history.Location" type="System.Drawing.Point, System.Drawing">
-    <value>464, 6</value>
-  </data>
-  <data name="tb_history.MaxLength" type="System.Int32, mscorlib">
-    <value>65535</value>
-  </data>
-  <data name="tb_history.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tb_history.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 351</value>
-  </data>
-  <data name="tb_history.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;tb_history.Name" xml:space="preserve">
     <value>tb_history</value>
@@ -725,22 +400,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;tb_history.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btn_enable.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 18pt</value>
-  </data>
-  <data name="btn_enable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
-  </data>
-  <data name="btn_enable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 50</value>
-  </data>
-  <data name="btn_enable.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btn_enable.Text" xml:space="preserve">
-    <value>Enable</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;btn_enable.Name" xml:space="preserve">
     <value>btn_enable</value>
@@ -752,7 +412,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;btn_enable.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 24</value>
@@ -779,6 +439,970 @@
     <value>tab_con</value>
   </data>
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pb_connect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>676, 334</value>
+  </data>
+  <data name="pb_connect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 23</value>
+  </data>
+  <data name="pb_connect.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;pb_connect.Name" xml:space="preserve">
+    <value>pb_connect</value>
+  </data>
+  <data name="&gt;&gt;pb_connect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pb_connect.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;pb_connect.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_cycle_cut.Name" xml:space="preserve">
+    <value>btn_cycle_cut</value>
+  </data>
+  <data name="&gt;&gt;btn_cycle_cut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_cycle_cut.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_cycle_cut.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btn_yr_tare.Name" xml:space="preserve">
+    <value>btn_yr_tare</value>
+  </data>
+  <data name="&gt;&gt;btn_yr_tare.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_yr_tare.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_yr_tare.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lb_yr_en.Name" xml:space="preserve">
+    <value>lb_yr_en</value>
+  </data>
+  <data name="&gt;&gt;lb_yr_en.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_yr_en.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;lb_yr_en.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btn_move_yr.Name" xml:space="preserve">
+    <value>btn_move_yr</value>
+  </data>
+  <data name="&gt;&gt;btn_move_yr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_move_yr.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_move_yr.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tb_yr_to_move.Name" xml:space="preserve">
+    <value>tb_yr_to_move</value>
+  </data>
+  <data name="&gt;&gt;tb_yr_to_move.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_yr_to_move.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;tb_yr_to_move.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btn_on_off_cutter.Name" xml:space="preserve">
+    <value>btn_on_off_cutter</value>
+  </data>
+  <data name="&gt;&gt;btn_on_off_cutter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_on_off_cutter.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_on_off_cutter.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;btn_m3_down.Name" xml:space="preserve">
+    <value>btn_m3_down</value>
+  </data>
+  <data name="&gt;&gt;btn_m3_down.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_m3_down.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_m3_down.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;btn_m3_up.Name" xml:space="preserve">
+    <value>btn_m3_up</value>
+  </data>
+  <data name="&gt;&gt;btn_m3_up.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_m3_up.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_m3_up.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;btn_m2_ccw.Name" xml:space="preserve">
+    <value>btn_m2_ccw</value>
+  </data>
+  <data name="&gt;&gt;btn_m2_ccw.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_m2_ccw.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_m2_ccw.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;btn_m2_cw.Name" xml:space="preserve">
+    <value>btn_m2_cw</value>
+  </data>
+  <data name="&gt;&gt;btn_m2_cw.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_m2_cw.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_m2_cw.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;btn_m1_ccw.Name" xml:space="preserve">
+    <value>btn_m1_ccw</value>
+  </data>
+  <data name="&gt;&gt;btn_m1_ccw.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_m1_ccw.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_m1_ccw.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;btn_m1_cw.Name" xml:space="preserve">
+    <value>btn_m1_cw</value>
+  </data>
+  <data name="&gt;&gt;btn_m1_cw.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_m1_cw.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_m1_cw.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="GB_control.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 62</value>
+  </data>
+  <data name="GB_control.Size" type="System.Drawing.Size, System.Drawing">
+    <value>452, 295</value>
+  </data>
+  <data name="GB_control.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="GB_control.Text" xml:space="preserve">
+    <value>BTN</value>
+  </data>
+  <data name="&gt;&gt;GB_control.Name" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;GB_control.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GB_control.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;GB_control.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btn_cycle_cut.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btn_cycle_cut.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 20pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btn_cycle_cut.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_cycle_cut.Location" type="System.Drawing.Point, System.Drawing">
+    <value>319, 210</value>
+  </data>
+  <data name="btn_cycle_cut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 77</value>
+  </data>
+  <data name="btn_cycle_cut.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="btn_cycle_cut.Text" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="&gt;&gt;btn_cycle_cut.Name" xml:space="preserve">
+    <value>btn_cycle_cut</value>
+  </data>
+  <data name="&gt;&gt;btn_cycle_cut.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_cycle_cut.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_cycle_cut.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btn_yr_tare.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14pt</value>
+  </data>
+  <data name="btn_yr_tare.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_yr_tare.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 251</value>
+  </data>
+  <data name="btn_yr_tare.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 38</value>
+  </data>
+  <data name="btn_yr_tare.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="btn_yr_tare.Text" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="&gt;&gt;btn_yr_tare.Name" xml:space="preserve">
+    <value>btn_yr_tare</value>
+  </data>
+  <data name="&gt;&gt;btn_yr_tare.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_yr_tare.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_yr_tare.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 18pt</value>
+  </data>
+  <data name="label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 251</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 32</value>
+  </data>
+  <data name="label15.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>หลา</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lb_yr_en.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lb_yr_en.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 18pt</value>
+  </data>
+  <data name="lb_yr_en.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lb_yr_en.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 251</value>
+  </data>
+  <data name="lb_yr_en.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 32</value>
+  </data>
+  <data name="lb_yr_en.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="lb_yr_en.Text" xml:space="preserve">
+    <value>0.00</value>
+  </data>
+  <data name="&gt;&gt;lb_yr_en.Name" xml:space="preserve">
+    <value>lb_yr_en</value>
+  </data>
+  <data name="&gt;&gt;lb_yr_en.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_yr_en.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;lb_yr_en.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btn_move_yr.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 14pt</value>
+  </data>
+  <data name="btn_move_yr.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_move_yr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 210</value>
+  </data>
+  <data name="btn_move_yr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 39</value>
+  </data>
+  <data name="btn_move_yr.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="btn_move_yr.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="&gt;&gt;btn_move_yr.Name" xml:space="preserve">
+    <value>btn_move_yr</value>
+  </data>
+  <data name="&gt;&gt;btn_move_yr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_move_yr.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_move_yr.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tb_yr_to_move.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 18pt</value>
+  </data>
+  <data name="tb_yr_to_move.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 210</value>
+  </data>
+  <data name="tb_yr_to_move.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="tb_yr_to_move.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 39</value>
+  </data>
+  <data name="tb_yr_to_move.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="tb_yr_to_move.Text" xml:space="preserve">
+    <value>0.0</value>
+  </data>
+  <data name="&gt;&gt;tb_yr_to_move.Name" xml:space="preserve">
+    <value>tb_yr_to_move</value>
+  </data>
+  <data name="&gt;&gt;tb_yr_to_move.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_yr_to_move.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;tb_yr_to_move.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btn_on_off_cutter.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <data name="btn_on_off_cutter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_on_off_cutter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 163</value>
+  </data>
+  <data name="btn_on_off_cutter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 42</value>
+  </data>
+  <data name="btn_on_off_cutter.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="btn_on_off_cutter.Text" xml:space="preserve">
+    <value>ON/OFF CUTTER</value>
+  </data>
+  <data name="&gt;&gt;btn_on_off_cutter.Name" xml:space="preserve">
+    <value>btn_on_off_cutter</value>
+  </data>
+  <data name="&gt;&gt;btn_on_off_cutter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_on_off_cutter.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_on_off_cutter.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btn_m3_down.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 18pt</value>
+  </data>
+  <data name="btn_m3_down.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_m3_down.Location" type="System.Drawing.Point, System.Drawing">
+    <value>168, 115</value>
+  </data>
+  <data name="btn_m3_down.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 42</value>
+  </data>
+  <data name="btn_m3_down.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btn_m3_down.Text" xml:space="preserve">
+    <value>M3 DOWN</value>
+  </data>
+  <data name="&gt;&gt;btn_m3_down.Name" xml:space="preserve">
+    <value>btn_m3_down</value>
+  </data>
+  <data name="&gt;&gt;btn_m3_down.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_m3_down.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_m3_down.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btn_m3_up.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 18pt</value>
+  </data>
+  <data name="btn_m3_up.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_m3_up.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 115</value>
+  </data>
+  <data name="btn_m3_up.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 42</value>
+  </data>
+  <data name="btn_m3_up.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="btn_m3_up.Text" xml:space="preserve">
+    <value>M3 UP</value>
+  </data>
+  <data name="&gt;&gt;btn_m3_up.Name" xml:space="preserve">
+    <value>btn_m3_up</value>
+  </data>
+  <data name="&gt;&gt;btn_m3_up.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_m3_up.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_m3_up.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btn_m2_ccw.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 18pt</value>
+  </data>
+  <data name="btn_m2_ccw.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_m2_ccw.Location" type="System.Drawing.Point, System.Drawing">
+    <value>168, 67</value>
+  </data>
+  <data name="btn_m2_ccw.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 42</value>
+  </data>
+  <data name="btn_m2_ccw.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="btn_m2_ccw.Text" xml:space="preserve">
+    <value>M2 CCW</value>
+  </data>
+  <data name="&gt;&gt;btn_m2_ccw.Name" xml:space="preserve">
+    <value>btn_m2_ccw</value>
+  </data>
+  <data name="&gt;&gt;btn_m2_ccw.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_m2_ccw.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_m2_ccw.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btn_m2_cw.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 18pt</value>
+  </data>
+  <data name="btn_m2_cw.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_m2_cw.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 67</value>
+  </data>
+  <data name="btn_m2_cw.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 42</value>
+  </data>
+  <data name="btn_m2_cw.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btn_m2_cw.Text" xml:space="preserve">
+    <value>M2 CW</value>
+  </data>
+  <data name="&gt;&gt;btn_m2_cw.Name" xml:space="preserve">
+    <value>btn_m2_cw</value>
+  </data>
+  <data name="&gt;&gt;btn_m2_cw.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_m2_cw.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_m2_cw.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btn_m1_ccw.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 18pt</value>
+  </data>
+  <data name="btn_m1_ccw.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_m1_ccw.Location" type="System.Drawing.Point, System.Drawing">
+    <value>168, 22</value>
+  </data>
+  <data name="btn_m1_ccw.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 39</value>
+  </data>
+  <data name="btn_m1_ccw.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btn_m1_ccw.Text" xml:space="preserve">
+    <value>M1 CCW</value>
+  </data>
+  <data name="&gt;&gt;btn_m1_ccw.Name" xml:space="preserve">
+    <value>btn_m1_ccw</value>
+  </data>
+  <data name="&gt;&gt;btn_m1_ccw.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_m1_ccw.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_m1_ccw.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="btn_m1_cw.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 18pt</value>
+  </data>
+  <data name="btn_m1_cw.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_m1_cw.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 22</value>
+  </data>
+  <data name="btn_m1_cw.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 39</value>
+  </data>
+  <data name="btn_m1_cw.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btn_m1_cw.Text" xml:space="preserve">
+    <value>M1 CW</value>
+  </data>
+  <data name="&gt;&gt;btn_m1_cw.Name" xml:space="preserve">
+    <value>btn_m1_cw</value>
+  </data>
+  <data name="&gt;&gt;btn_m1_cw.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_m1_cw.Parent" xml:space="preserve">
+    <value>GB_control</value>
+  </data>
+  <data name="&gt;&gt;btn_m1_cw.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="tb_history.Location" type="System.Drawing.Point, System.Drawing">
+    <value>464, 6</value>
+  </data>
+  <data name="tb_history.MaxLength" type="System.Int32, mscorlib">
+    <value>65535</value>
+  </data>
+  <data name="tb_history.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tb_history.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 325</value>
+  </data>
+  <data name="tb_history.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;tb_history.Name" xml:space="preserve">
+    <value>tb_history</value>
+  </data>
+  <data name="&gt;&gt;tb_history.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_history.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tb_history.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btn_enable.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 18pt</value>
+  </data>
+  <data name="btn_enable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="btn_enable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>452, 50</value>
+  </data>
+  <data name="btn_enable.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btn_enable.Text" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="&gt;&gt;btn_enable.Name" xml:space="preserve">
+    <value>btn_enable</value>
+  </data>
+  <data name="&gt;&gt;btn_enable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_enable.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btn_enable.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;gb_main.Name" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;gb_main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gb_main.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;gb_main.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>754, 363</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>PLC</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tab_con</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tb_read_address.Name" xml:space="preserve">
+    <value>tb_read_address</value>
+  </data>
+  <data name="&gt;&gt;tb_read_address.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_read_address.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;tb_read_address.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cb_read_type.Name" xml:space="preserve">
+    <value>cb_read_type</value>
+  </data>
+  <data name="&gt;&gt;cb_read_type.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cb_read_type.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;cb_read_type.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;tb_write_address.Name" xml:space="preserve">
+    <value>tb_write_address</value>
+  </data>
+  <data name="&gt;&gt;tb_write_address.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_write_address.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;tb_write_address.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;cb_write_type.Name" xml:space="preserve">
+    <value>cb_write_type</value>
+  </data>
+  <data name="&gt;&gt;cb_write_type.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cb_write_type.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;cb_write_type.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;tb_data_to_write.Name" xml:space="preserve">
+    <value>tb_data_to_write</value>
+  </data>
+  <data name="&gt;&gt;tb_data_to_write.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_data_to_write.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;tb_data_to_write.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;tb_write_db.Name" xml:space="preserve">
+    <value>tb_write_db</value>
+  </data>
+  <data name="&gt;&gt;tb_write_db.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_write_db.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;tb_write_db.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;lb_data_read.Name" xml:space="preserve">
+    <value>lb_data_read</value>
+  </data>
+  <data name="&gt;&gt;lb_data_read.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_data_read.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;lb_data_read.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;btn_read_data.Name" xml:space="preserve">
+    <value>btn_read_data</value>
+  </data>
+  <data name="&gt;&gt;btn_read_data.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_read_data.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;btn_read_data.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;tb_read_db.Name" xml:space="preserve">
+    <value>tb_read_db</value>
+  </data>
+  <data name="&gt;&gt;tb_read_db.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_read_db.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;tb_read_db.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="gb_main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 5</value>
+  </data>
+  <data name="gb_main.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="gb_main.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="gb_main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>528, 199</value>
+  </data>
+  <data name="gb_main.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="gb_main.Text" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="&gt;&gt;gb_main.Name" xml:space="preserve">
+    <value>gb_main</value>
+  </data>
+  <data name="&gt;&gt;gb_main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gb_main.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;gb_main.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="tb_read_address.Location" type="System.Drawing.Point, System.Drawing">
@@ -1378,62 +2002,152 @@
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <data name="gb_main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 5</value>
+  <data name="&gt;&gt;button2.Name" xml:space="preserve">
+    <value>button2</value>
   </data>
-  <data name="gb_main.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="gb_main.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+    <value>tabPage3</value>
   </data>
-  <data name="gb_main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>528, 199</value>
-  </data>
-  <data name="gb_main.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="gb_main.Text" xml:space="preserve">
-    <value>Main</value>
-  </data>
-  <data name="&gt;&gt;gb_main.Name" xml:space="preserve">
-    <value>gb_main</value>
-  </data>
-  <data name="&gt;&gt;gb_main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gb_main.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;gb_main.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="&gt;&gt;label22.Name" xml:space="preserve">
+    <value>label22</value>
+  </data>
+  <data name="&gt;&gt;label22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label22.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label21.Name" xml:space="preserve">
+    <value>label21</value>
+  </data>
+  <data name="&gt;&gt;label21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label20.Name" xml:space="preserve">
+    <value>label20</value>
+  </data>
+  <data name="&gt;&gt;label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tb_calculation_value.Name" xml:space="preserve">
+    <value>tb_calculation_value</value>
+  </data>
+  <data name="&gt;&gt;tb_calculation_value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_calculation_value.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;tb_calculation_value.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label19.Name" xml:space="preserve">
+    <value>label19</value>
+  </data>
+  <data name="&gt;&gt;label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lb_cail_yard.Name" xml:space="preserve">
+    <value>lb_cail_yard</value>
+  </data>
+  <data name="&gt;&gt;lb_cail_yard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_cail_yard.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;lb_cail_yard.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lb_pulse.Name" xml:space="preserve">
+    <value>lb_pulse</value>
+  </data>
+  <data name="&gt;&gt;lb_pulse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_pulse.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;lb_pulse.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
+  </data>
+  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label17.Name" xml:space="preserve">
+    <value>label17</value>
+  </data>
+  <data name="&gt;&gt;label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 24</value>
   </data>
-  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
     <value>754, 363</value>
   </data>
-  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>PLC</value>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Calibations</value>
   </data>
-  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>tabPage2</value>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
   </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
     <value>tab_con</value>
   </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="button2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 18pt</value>
@@ -1567,34 +2281,34 @@
   <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="tb_calculation_value.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 18pt</value>
   </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tb_calculation_value.Location" type="System.Drawing.Point, System.Drawing">
     <value>183, 69</value>
   </data>
-  <data name="textBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tb_calculation_value.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tb_calculation_value.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 39</value>
   </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="tb_calculation_value.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="textBox1.Text" xml:space="preserve">
+  <data name="tb_calculation_value.Text" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
+  <data name="&gt;&gt;tb_calculation_value.Name" xml:space="preserve">
+    <value>tb_calculation_value</value>
   </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;tb_calculation_value.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tb_calculation_value.Parent" xml:space="preserve">
     <value>tabPage3</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tb_calculation_value.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="label19.AutoSize" type="System.Boolean, mscorlib">
@@ -1759,82 +2473,37 @@
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>754, 363</value>
-  </data>
-  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tabPage3.Text" xml:space="preserve">
-    <value>Calibations</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
-    <value>tabPage3</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
-    <value>tab_con</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tab_con.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 38</value>
-  </data>
-  <data name="tab_con.Size" type="System.Drawing.Size, System.Drawing">
-    <value>762, 391</value>
-  </data>
-  <data name="tab_con.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;tab_con.Name" xml:space="preserve">
-    <value>tab_con</value>
-  </data>
-  <data name="&gt;&gt;tab_con.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tab_con.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tab_con.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label16.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lb_date.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lb_date.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="lb_date.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>606, 14</value>
+  <data name="lb_date.Location" type="System.Drawing.Point, System.Drawing">
+    <value>594, 12</value>
   </data>
-  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 15</value>
+  <data name="lb_date.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 21</value>
   </data>
-  <data name="label16.TabIndex" type="System.Int32, mscorlib">
+  <data name="lb_date.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="label16.Text" xml:space="preserve">
+  <data name="lb_date.Text" xml:space="preserve">
     <value>dd/MM/yyyy HH:mm:ss</value>
   </data>
-  <data name="&gt;&gt;label16.Name" xml:space="preserve">
-    <value>label16</value>
+  <data name="&gt;&gt;lb_date.Name" xml:space="preserve">
+    <value>lb_date</value>
   </data>
-  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+  <data name="&gt;&gt;lb_date.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lb_date.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lb_date.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1853,7 +2522,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>S7 Example</value>
+    <value>Fabric</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Form1</value>
