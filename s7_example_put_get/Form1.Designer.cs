@@ -42,6 +42,7 @@
             tabPage1 = new TabPage();
             pb_connect = new ProgressBar();
             GB_control = new GroupBox();
+            btn_reset_state = new Button();
             btn_cycle_cut = new Button();
             btn_yr_tare = new Button();
             label15 = new Label();
@@ -80,6 +81,13 @@
             tb_read_db = new TextBox();
             label5 = new Label();
             tabPage3 = new TabPage();
+            label25 = new Label();
+            label24 = new Label();
+            button4 = new Button();
+            label16 = new Label();
+            tb_cutting_speed_value = new TextBox();
+            label23 = new Label();
+            button3 = new Button();
             button2 = new Button();
             label22 = new Label();
             label21 = new Label();
@@ -174,6 +182,7 @@
             // 
             // GB_control
             // 
+            GB_control.Controls.Add(btn_reset_state);
             GB_control.Controls.Add(btn_cycle_cut);
             GB_control.Controls.Add(btn_yr_tare);
             GB_control.Controls.Add(label15);
@@ -190,6 +199,13 @@
             resources.ApplyResources(GB_control, "GB_control");
             GB_control.Name = "GB_control";
             GB_control.TabStop = false;
+            // 
+            // btn_reset_state
+            // 
+            btn_reset_state.BackColor = Color.LightSkyBlue;
+            resources.ApplyResources(btn_reset_state, "btn_reset_state");
+            btn_reset_state.Name = "btn_reset_state";
+            btn_reset_state.UseVisualStyleBackColor = false;
             // 
             // btn_cycle_cut
             // 
@@ -448,6 +464,13 @@
             // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(label25);
+            tabPage3.Controls.Add(label24);
+            tabPage3.Controls.Add(button4);
+            tabPage3.Controls.Add(label16);
+            tabPage3.Controls.Add(tb_cutting_speed_value);
+            tabPage3.Controls.Add(label23);
+            tabPage3.Controls.Add(button3);
             tabPage3.Controls.Add(button2);
             tabPage3.Controls.Add(label22);
             tabPage3.Controls.Add(label21);
@@ -461,6 +484,48 @@
             resources.ApplyResources(tabPage3, "tabPage3");
             tabPage3.Name = "tabPage3";
             tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            resources.ApplyResources(label25, "label25");
+            label25.Name = "label25";
+            // 
+            // label24
+            // 
+            resources.ApplyResources(label24, "label24");
+            label24.Name = "label24";
+            // 
+            // button4
+            // 
+            resources.ApplyResources(button4, "button4");
+            button4.Name = "button4";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // label16
+            // 
+            resources.ApplyResources(label16, "label16");
+            label16.Name = "label16";
+            label16.Click += label16_Click;
+            // 
+            // tb_cutting_speed_value
+            // 
+            resources.ApplyResources(tb_cutting_speed_value, "tb_cutting_speed_value");
+            tb_cutting_speed_value.Name = "tb_cutting_speed_value";
+            // 
+            // label23
+            // 
+            resources.ApplyResources(label23, "label23");
+            label23.Name = "label23";
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Pink;
+            resources.ApplyResources(button3, "button3");
+            button3.ForeColor = Color.Red;
+            button3.Name = "button3";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += btn_yr_tare_Click;
             // 
             // button2
             // 
@@ -618,5 +683,13 @@
         private Button button2;
         private ProgressBar pb_connect;
         private Button btn_cycle_cut;
+        private Button button3;
+        private Button button4;
+        private Label label16;
+        private TextBox tb_cutting_speed_value;
+        private Label label23;
+        private Label label25;
+        private Label label24;
+        private Button btn_reset_state;
     }
 }

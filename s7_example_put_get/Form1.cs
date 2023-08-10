@@ -46,7 +46,7 @@ namespace s7_example_put_get
             }
 
             System.DateTime current_time = System.DateTime.Now;
-            lb_date.Text = current_time.ToString("dd/MM/yyyy HH:mm:ss");
+            lb_date.Text = current_time.ToString("dd/MM/yyyy\n HH:mm:ss");
             tab_con.Enabled = isConnect;
             tb_calculation_value.Text = calculation_value.ToString();
             GB_control.Enabled = auto_overide_enable;
@@ -57,7 +57,7 @@ namespace s7_example_put_get
         private void Task_Time_callback(object sender, EventArgs e)
         {
             System.DateTime current_time = System.DateTime.Now;
-            lb_date.Text = current_time.ToString("dd/MM/yyyy HH:mm:ss");
+            lb_date.Text = current_time.ToString("dd/MM/yyyy\n HH:mm:ss");
         }
         bool init_connection(CpuType plc_type, IPAddress plc_ip, short plc_rack_no, short plc_slot_no)
         {
@@ -97,9 +97,43 @@ namespace s7_example_put_get
             }
             current_pulse = read_real("DB1", "16.0");
             current_yr = calculation();
-             cutting = read_bool("DB1", "28.4");
-             cutDone = read_bool("DB1", "28.5");
-             cutHome = read_bool("DB1", "28.6");
+            bool reset_state = read_bool("DB1", "41.3", false);
+            if (!reset_state)
+            {
+                btn_reset_state.BackColor = Color.LightSteelBlue;
+                btn_reset_state.ForeColor = Color.Black;
+            }
+            else
+            {
+                btn_reset_state.BackColor = Color.Blue;
+                btn_reset_state.ForeColor = Color.White;
+            }
+
+            int step = read_int("DB1", "0.0", false) ;
+            cutting = read_bool("DB1", "41.0", false);
+            if ((step == 201) && cutting)
+            {
+                btn_cycle_cut.Text = "Cutting"; 
+            }
+            else if (step == 201 && cutting) {
+                btn_cycle_cut.Text = "Go Home";
+            }
+            else if (step == 202 && cutting)
+            {
+                btn_cycle_cut.Text = "CUT Done";
+            }
+            else if (step == 200 && !cutting)
+            {
+                btn_cycle_cut.Text = "CUT";
+                btn_cycle_cut.Enabled = true;
+            }
+
+
+            //btn_reset_state
+            /*
+            cutting = read_bool("DB1", "28.4");
+            cutDone = read_bool("DB1", "28.5");
+            cutHome = read_bool("DB1", "28.6");
             if (cutting && (cutDone == false) && (cutHome == false))
             {
                 btn_cycle_cut.Text = "Cutting";
@@ -117,11 +151,12 @@ namespace s7_example_put_get
                 btn_cycle_cut.Text = "Home";
                 btn_cycle_cut.Enabled = false;
             }
-            else {
+            else
+            {
                 btn_cycle_cut.Text = "CUT";
                 btn_cycle_cut.Enabled = false;
             }
-
+            */
             lb_pulse.Text = current_pulse.ToString("0");
             lb_cail_yard.Text = current_yr.ToString("0.00000");
             if (current_yr <= 0.01)
@@ -164,11 +199,27 @@ namespace s7_example_put_get
                 if (start_cal_to_yr && (target_to_move >= current_yr))
                 {
                     start_moving();
+                    btn_cycle_cut.Enabled = false;
+                    btn_on_off_cutter.Enabled = false;
+                    btn_m3_up.Enabled = false;
+                    btn_m3_down.Enabled = false;
+                    btn_m2_cw.Enabled = false;
+                    btn_m2_ccw.Enabled = false;
+                    btn_m1_cw.Enabled = false;
+                    btn_m1_ccw.Enabled = false;
+                    btn_cycle_cut.Text = "Moving";
                 }
                 else
                 {
                     stop_moving();
                     btn_cycle_cut.Enabled = true;
+                    btn_on_off_cutter.Enabled = true;
+                    btn_m3_up.Enabled = true;
+                    btn_m3_down.Enabled = true;
+                    btn_m2_cw.Enabled = true;
+                    btn_m2_ccw.Enabled = true;
+                    btn_m1_cw.Enabled = true;
+                    btn_m1_ccw.Enabled = true;
                     btn_cycle_cut.Text = "CUT";
                 }
             }
@@ -369,6 +420,25 @@ namespace s7_example_put_get
             }
             tb_history.Text = str_history;
         }
+        void write_int(string data_block, string data_address, int data)
+        {
+            string con = "";
+            con += data_block;
+            try
+            {
+                con += ".DBW";
+                con += data_address;
+                //str_history += "Write " + data.ToString() + " to " + con + "\r\n";
+                str_history = "MOVE " + data.ToString() + " to " + con + "\r\n" + str_history;
+                plc.Write(con, data);
+            }
+            catch (Exception ex)
+            {
+                str_history += "Write Error " + ex.Message + "\r\n";
+                MessageBox.Show(ex.Message, "Error");
+            }
+            tb_history.Text = str_history;
+        }
 
         void write_real(string data_block, string data_address, double data)
         {
@@ -389,8 +459,32 @@ namespace s7_example_put_get
             }
             tb_history.Text = str_history;
         }
+        int read_int(string data_block, string data_address,bool err)
+        {
+            int real = 0;
+            string con = "";
+            con += data_block;
+            try
+            {
+                con += ".DBD";
+                con += data_address;
+                //str_history += "Write " + data.ToString() + " to " + con + "\r\n";
+                var dword = (uint)(plc.Read(con));
+                real = dword.ConvertToInt();
+            }
+            catch (Exception ex)
+            {
+                str_history += "Read Error " + ex.Message + "\r\n";
+                if (err)
+                {
+                    MessageBox.Show(ex.Message, "Error");
+                }
+                
+            }
 
-        double read_real(string data_block, string data_address)
+            return real;
+        }
+        double read_real(string data_block, string data_address, bool err = false)
         {
             double real = 0.0f;
             string con = "";
@@ -406,14 +500,17 @@ namespace s7_example_put_get
             catch (Exception ex)
             {
                 str_history += "Read Error " + ex.Message + "\r\n";
-                MessageBox.Show(ex.Message, "Error");
+                if (err)
+                {
+                    MessageBox.Show(ex.Message, "Error");
+                }
             }
 
             return real;
         }
 
 
-        bool read_bool(string data_block, string data_address)
+        bool read_bool(string data_block, string data_address, bool err = true)
         {
             bool real = false;
             string con = "";
@@ -428,7 +525,11 @@ namespace s7_example_put_get
             catch (Exception ex)
             {
                 str_history += "Read Error " + ex.Message + "\r\n";
-                MessageBox.Show(ex.Message, "Error");
+                if (err)
+                {
+                    MessageBox.Show(ex.Message, "Error");
+                }
+
             }
 
             return real;
@@ -692,7 +793,6 @@ namespace s7_example_put_get
                 calculation_value = 1;
                 MessageBox.Show(ex.Message, "Parse Parameter Error");
             }
-
         }
 
         private void btn_cycle_cut_Click(object sender, EventArgs e)
@@ -700,6 +800,33 @@ namespace s7_example_put_get
             if (auto_overide_enable)
             {
                 write_bool("DB1", "28.4", true);
+                btn_cycle_cut.Enabled = false;
+                btn_cycle_cut.Text = "Cutting";
+            }
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int cutting_speed_value = 100;
+            try
+            {
+                cutting_speed_value = int.Parse(tb_cutting_speed_value.Text);
+                if (cutting_speed_value <= 0)
+                {
+                    cutting_speed_value = 10;
+                }
+                YAMLHelper.SaveCalculationData(cutting_speed_value);
+                write_int("DB1", "6.0", cutting_speed_value);
+            }
+            catch (Exception ex)
+            {
+                calculation_value = 1;
+                MessageBox.Show(ex.Message, "Parse Parameter Error");
             }
         }
     }

@@ -490,24 +490,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\KISR\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\CPL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\KISR\\Documents\\Github\\s7_example_put_get\\s7_example_put_get\\s7_example_put_get.csproj",
+      "projectUniqueName": "C:\\Users\\CPL\\Documents\\GitHub\\s7_example_put_get\\s7_example_put_get\\s7_example_put_get.csproj",
       "projectName": "s7_example_put_get",
-      "projectPath": "C:\\Users\\KISR\\Documents\\Github\\s7_example_put_get\\s7_example_put_get\\s7_example_put_get.csproj",
-      "packagesPath": "C:\\Users\\KISR\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\KISR\\Documents\\Github\\s7_example_put_get\\s7_example_put_get\\obj\\",
+      "projectPath": "C:\\Users\\CPL\\Documents\\GitHub\\s7_example_put_get\\s7_example_put_get\\s7_example_put_get.csproj",
+      "packagesPath": "C:\\Users\\CPL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\CPL\\Documents\\GitHub\\s7_example_put_get\\s7_example_put_get\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\KISR\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\CPL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -569,7 +564,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

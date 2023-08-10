@@ -1,21 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "6BGmQsdDOBg6z9EBcItkkBAJjmgIZMZeg6nKu6EMm5s9V8B7dEBUFI20ZVlhsd+LS2eVhnf/dYhgTde0F67caA==",
+  "dgSpecHash": "FdmovgpPkmll55eK5epONBT/uXeVRkLrrqYNY3ee0FOrRb9ro0xqmb/v1iP31uda8wKacZbO+AxeA10Plcr07w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\KISR\\Documents\\Github\\s7_example_put_get\\s7_example_put_get\\s7_example_put_get.csproj",
+  "projectFilePath": "C:\\Users\\CPL\\Documents\\GitHub\\s7_example_put_get\\s7_example_put_get\\s7_example_put_get.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\KISR\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.19\\microsoft.aspnetcore.authorization.6.0.19.nupkg.sha512",
-    "C:\\Users\\KISR\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.19\\microsoft.aspnetcore.components.6.0.19.nupkg.sha512",
-    "C:\\Users\\KISR\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.19\\microsoft.aspnetcore.components.analyzers.6.0.19.nupkg.sha512",
-    "C:\\Users\\KISR\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.19\\microsoft.aspnetcore.metadata.6.0.19.nupkg.sha512",
-    "C:\\Users\\KISR\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\KISR\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.4\\microsoft.extensions.logging.abstractions.6.0.4.nupkg.sha512",
-    "C:\\Users\\KISR\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
-    "C:\\Users\\KISR\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
-    "C:\\Users\\KISR\\.nuget\\packages\\s7netplus\\0.19.0\\s7netplus.0.19.0.nupkg.sha512",
-    "C:\\Users\\KISR\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512",
-    "C:\\Users\\KISR\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\KISR\\.nuget\\packages\\yamldotnet\\13.1.1\\yamldotnet.13.1.1.nupkg.sha512"
+    "C:\\Users\\CPL\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.19\\microsoft.aspnetcore.authorization.6.0.19.nupkg.sha512",
+    "C:\\Users\\CPL\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.19\\microsoft.aspnetcore.components.6.0.19.nupkg.sha512",
+    "C:\\Users\\CPL\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.19\\microsoft.aspnetcore.components.analyzers.6.0.19.nupkg.sha512",
+    "C:\\Users\\CPL\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.19\\microsoft.aspnetcore.metadata.6.0.19.nupkg.sha512",
+    "C:\\Users\\CPL\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\CPL\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.4\\microsoft.extensions.logging.abstractions.6.0.4.nupkg.sha512",
+    "C:\\Users\\CPL\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\CPL\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\CPL\\.nuget\\packages\\s7netplus\\0.19.0\\s7netplus.0.19.0.nupkg.sha512",
+    "C:\\Users\\CPL\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512",
+    "C:\\Users\\CPL\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\CPL\\.nuget\\packages\\yamldotnet\\13.1.1\\yamldotnet.13.1.1.nupkg.sha512"
   ],
   "logs": []
 }

@@ -8,6 +8,7 @@ public class CalculationData
 public static class YAMLHelper
 {
     private const string FilePath = "calculation_data.yaml";
+ 
 
     public static void SaveCalculationData(double calculationValue)
     {
