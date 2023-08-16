@@ -109,13 +109,14 @@ namespace s7_example_put_get
                 btn_reset_state.ForeColor = Color.White;
             }
 
-            int step = read_int("DB1", "0.0", false) ;
+            int step = read_int("DB1", "0.0", false);
             cutting = read_bool("DB1", "41.0", false);
             if ((step == 201) && cutting)
             {
-                btn_cycle_cut.Text = "Cutting"; 
+                btn_cycle_cut.Text = "Cutting";
             }
-            else if (step == 201 && cutting) {
+            else if (step == 201 && cutting)
+            {
                 btn_cycle_cut.Text = "Go Home";
             }
             else if (step == 202 && cutting)
@@ -158,12 +159,12 @@ namespace s7_example_put_get
             }
             */
             lb_pulse.Text = current_pulse.ToString("0");
-            lb_cail_yard.Text = current_yr.ToString("0.00000");
+            lb_cail_yard.Text = current_yr.ToString("0.00");
             if (current_yr <= 0.01)
             {
                 lb_yr_en.Text = current_yr.ToString("0.00000");
             }
-            else if (current_yr <= 0.1)
+            else if (current_yr >= 0.1)
             {
                 lb_yr_en.Text = current_yr.ToString("0.000");
             }
@@ -459,7 +460,7 @@ namespace s7_example_put_get
             }
             tb_history.Text = str_history;
         }
-        int read_int(string data_block, string data_address,bool err)
+        int read_int(string data_block, string data_address, bool err)
         {
             int real = 0;
             string con = "";
@@ -479,7 +480,7 @@ namespace s7_example_put_get
                 {
                     MessageBox.Show(ex.Message, "Error");
                 }
-                
+
             }
 
             return real;
@@ -740,24 +741,8 @@ namespace s7_example_put_get
             if (result == DialogResult.Yes)
             {
 
-                write_real("DB1", "16.0", 0.0);
-                if (start_cal_to_yr)
-                {
-                    stop_moving();
-                    if (auto_overide_enable)
-                    {
-                        write_bool("DB1", "40.5", true);
-                    }
-                }
-                else
-                {
-                    return;
-                }
-                btn_move_yr.Text = "Start";
-                btn_move_yr.ForeColor = Color.Black;
-                btn_move_yr.BackColor = Color.Chartreuse;
-                btn_cycle_cut.Enabled = false;
-                write_bool("DB1", "28.4", false);
+                write_bool("DB1", "40.5", true);
+
             }
         }
 
@@ -828,6 +813,16 @@ namespace s7_example_put_get
                 calculation_value = 1;
                 MessageBox.Show(ex.Message, "Parse Parameter Error");
             }
+        }
+
+        private void lb_cail_yard_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

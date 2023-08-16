@@ -538,6 +538,7 @@
             // 
             resources.ApplyResources(label22, "label22");
             label22.Name = "label22";
+            label22.Click += label22_Click;
             // 
             // label21
             // 
@@ -563,6 +564,7 @@
             // 
             resources.ApplyResources(lb_cail_yard, "lb_cail_yard");
             lb_cail_yard.Name = "lb_cail_yard";
+            lb_cail_yard.Click += lb_cail_yard_Click;
             // 
             // lb_pulse
             // 
