@@ -26,8 +26,8 @@ namespace s7_example_put_get
         private double current_pulse = 0.00f;
         const int task_interval = 200;
         bool cutting = false;
-        bool cutDone = false;
-        bool cutHome = false;
+        bool nofab = false;
+        bool isRun = false;
         public Form1()
         {
             InitializeComponent();
@@ -108,7 +108,11 @@ namespace s7_example_put_get
                 btn_reset_state.BackColor = Color.Blue;
                 btn_reset_state.ForeColor = Color.White;
             }
-
+            nofab = read_bool("DB1", "41.4");
+            if (!nofab)
+            {
+                btn_cycle_cut.Text = "ไม่มีผ้า";
+            }
             int step = read_int("DB1", "0.0", false);
             cutting = read_bool("DB1", "41.0", false);
             if ((step == 201) && cutting)
@@ -197,7 +201,7 @@ namespace s7_example_put_get
             try
             {
                 target_to_move = double.Parse(tb_yr_to_move.Text);
-                if (start_cal_to_yr && (target_to_move >= current_yr))
+                if (start_cal_to_yr && (target_to_move >= current_yr)  )
                 {
                     start_moving();
                     btn_cycle_cut.Enabled = false;
@@ -209,9 +213,13 @@ namespace s7_example_put_get
                     btn_m1_cw.Enabled = false;
                     btn_m1_ccw.Enabled = false;
                     btn_cycle_cut.Text = "Moving";
+                    isRun = true;
                 }
                 else
                 {
+                    isRun = false;
+                    Task_to_yr.Dispose();
+                    Task_to_yr.Stop();
                     stop_moving();
                     btn_cycle_cut.Enabled = true;
                     btn_on_off_cutter.Enabled = true;
@@ -221,7 +229,10 @@ namespace s7_example_put_get
                     btn_m2_ccw.Enabled = true;
                     btn_m1_cw.Enabled = true;
                     btn_m1_ccw.Enabled = true;
-                    btn_cycle_cut.Text = "CUT";
+                    btn_cycle_cut.Text = "Cut";
+
+                   
+
                 }
             }
             catch (Exception ex)
@@ -244,19 +255,24 @@ namespace s7_example_put_get
             write_bool("DB1", "28.1", true);
             write_bool("DB1", "28.2", false);
             write_bool("DB1", "28.3", true);
+           
         }
-
+        /*
+         Bug Here
+        */
         private void stop_moving()
-        {
+        { 
             btn_yr_tare.Text = "Reset";
             btn_move_yr.Text = "Start";
             btn_move_yr.ForeColor = Color.Black;
             btn_move_yr.BackColor = Color.Chartreuse;
             write_bool("DB1", "28.1", false);
-            write_bool("DB1", "28.3", false);
-            Task_to_yr.Dispose();
-            Task_to_yr.Stop();
+            write_bool("DB1", "28.3", false); 
             start_cal_to_yr = false;
+            write_bool("DB1", "28.4", true);
+            write_bool("DB1", "28.3", true);
+            Thread.Sleep(10000);
+            write_bool("DB1", "28.3", false);
         }
 
         private void Start_to_yr_task()
@@ -421,8 +437,15 @@ namespace s7_example_put_get
             }
             tb_history.Text = str_history;
         }
-        void write_int(string data_block, string data_address, int data)
+        void write_int(string data_block, string data_address, short data)
         {
+            /*
+             data_address += ".DBW";
+                    data_address += tb_write_address.Text;
+                    short data = short.Parse(tb_data_to_write.Text);
+                    plc.Write(data_address, data);
+                   
+             */
             string con = "";
             con += data_block;
             try
@@ -577,6 +600,8 @@ namespace s7_example_put_get
 
         private void btn_enable_Click(object sender, EventArgs e)
         {
+            write_bool("DB1", "28.4", false);
+            write_int("DB1", "0.0", 200);
             auto_overide_enable = !auto_overide_enable;
             GB_control.Enabled = auto_overide_enable;
             if (auto_overide_enable)
@@ -644,22 +669,22 @@ namespace s7_example_put_get
 
         private void btn_m3_up_MouseDown(object sender, MouseEventArgs e)
         {
-            write_bool("DB1", "40.1", true);
+            write_bool("DB1", "40.2", true);
         }
 
         private void btn_m3_up_MouseUp(object sender, MouseEventArgs e)
         {
-            write_bool("DB1", "40.1", false);
+            write_bool("DB1", "40.2", false);
         }
 
         private void btn_m3_down_MouseDown(object sender, MouseEventArgs e)
         {
-            write_bool("DB1", "40.2", true);
+            write_bool("DB1", "40.1", true);
         }
 
         private void btn_m3_down_MouseUp(object sender, MouseEventArgs e)
         {
-            write_bool("DB1", "40.2", false);
+            write_bool("DB1", "40.1", false);
         }
 
         private void btn_on_off_cutter_MouseDown(object sender, MouseEventArgs e)
@@ -693,7 +718,13 @@ namespace s7_example_put_get
             double target_to_move = 0.00f;
             try
             {
+
                 target_to_move = double.Parse(tb_yr_to_move.Text);
+                if(target_to_move < 0.1) {
+                    MessageBox.Show("Taget near ~0.0","Invalid Parameter");
+                    target_to_move = 1.0;
+                    tb_yr_to_move.Text = target_to_move.ToString();
+                }
                 if ((target_to_move >= current_yr))
                 {
                     if (!start_cal_to_yr)
@@ -785,8 +816,8 @@ namespace s7_example_put_get
             if (auto_overide_enable)
             {
                 write_bool("DB1", "28.4", true);
-                btn_cycle_cut.Enabled = false;
-                btn_cycle_cut.Text = "Cutting";
+                //btn_cycle_cut.Enabled = false;
+                //btn_cycle_cut.Text = "Cutting";
             }
         }
 
@@ -797,10 +828,10 @@ namespace s7_example_put_get
 
         private void button4_Click(object sender, EventArgs e)
         {
-            int cutting_speed_value = 100;
+            short cutting_speed_value = 100;
             try
             {
-                cutting_speed_value = int.Parse(tb_cutting_speed_value.Text);
+                cutting_speed_value = short.Parse(tb_cutting_speed_value.Text);
                 if (cutting_speed_value <= 0)
                 {
                     cutting_speed_value = 10;
@@ -821,6 +852,11 @@ namespace s7_example_put_get
         }
 
         private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_m3_up_Click(object sender, EventArgs e)
         {
 
         }

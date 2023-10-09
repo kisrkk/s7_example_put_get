@@ -271,6 +271,7 @@
             resources.ApplyResources(btn_m3_up, "btn_m3_up");
             btn_m3_up.Name = "btn_m3_up";
             btn_m3_up.UseVisualStyleBackColor = true;
+            btn_m3_up.Click += btn_m3_up_Click;
             btn_m3_up.MouseDown += btn_m3_up_MouseDown;
             btn_m3_up.MouseUp += btn_m3_up_MouseUp;
             // 
