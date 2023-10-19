@@ -109,6 +109,7 @@ namespace s7_example_put_get
                 btn_reset_state.ForeColor = Color.White;
             }
             nofab = read_bool("DB1", "41.4");
+
             if (!nofab)
             {
                 btn_cycle_cut.Text = "ไม่มีผ้า";
@@ -204,6 +205,7 @@ namespace s7_example_put_get
                 if (start_cal_to_yr && (target_to_move >= current_yr)  )
                 {
                     start_moving();
+                    write_int("DB1","0.0",201);
                     btn_cycle_cut.Enabled = false;
                     btn_on_off_cutter.Enabled = false;
                     btn_m3_up.Enabled = false;
@@ -220,6 +222,7 @@ namespace s7_example_put_get
                     isRun = false;
                     Task_to_yr.Dispose();
                     Task_to_yr.Stop();
+                    write_int("DB1", "0.0", 202);
                     stop_moving();
                     btn_cycle_cut.Enabled = true;
                     btn_on_off_cutter.Enabled = true;
@@ -254,8 +257,7 @@ namespace s7_example_put_get
             write_bool("DB1", "28.0", false);
             write_bool("DB1", "28.1", true);
             write_bool("DB1", "28.2", false);
-            write_bool("DB1", "28.3", true);
-           
+            write_bool("DB1", "28.3", true); 
         }
         /*
          Bug Here
@@ -266,13 +268,15 @@ namespace s7_example_put_get
             btn_move_yr.Text = "Start";
             btn_move_yr.ForeColor = Color.Black;
             btn_move_yr.BackColor = Color.Chartreuse;
-            write_bool("DB1", "28.1", false);
-            write_bool("DB1", "28.3", false); 
-            start_cal_to_yr = false;
-            write_bool("DB1", "28.4", true);
-            write_bool("DB1", "28.3", true);
-            Thread.Sleep(10000);
-            write_bool("DB1", "28.3", false);
+            write_bool("DB1", "28.1", false);               // stop M1
+            write_bool("DB1", "28.3", false);               // stop M2
+            start_cal_to_yr = false;                        // stop Thread state
+            write_int("DB1", "0.0", 210);                   // set fsm step to 210
+            write_bool("DB1", "28.4", true);                // start cutting
+            while (read_bool("DB1", "28.4") == false) {; }  // await cutting state done
+            write_bool("DB1", "28.3", true);                // rolling M2 forward
+            Thread.Sleep(10000);                            // rolling for 10s
+            write_bool("DB1", "28.3", false);               // stop M2
         }
 
         private void Start_to_yr_task()
