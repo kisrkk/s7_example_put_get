@@ -83,3 +83,17 @@ C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\bin\Debug\ne
 C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\runtimes\win7-x64\native\sqlite3.dll
 C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\runtimes\win7-x86\native\sqlite3.dll
 C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\obj\Debug\net6.0-windows\s7_example_put_get.Properties.Resources.resources
+C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\EntityFramework.dll
+C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\System.Data.SQLite.EF6.dll
+C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\CPL\Documents\GitHub\s7_example_put_get\s7_example_put_get\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

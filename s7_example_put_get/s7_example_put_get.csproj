@@ -12,6 +12,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.19" />
     <PackageReference Include="S7netplus" Version="0.19.0" />
     <PackageReference Include="SQLite" Version="3.13.0" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
     <PackageReference Include="YamlDotNet" Version="13.1.1" />
   </ItemGroup>
 

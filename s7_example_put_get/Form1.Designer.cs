@@ -99,6 +99,7 @@
             label18 = new Label();
             label17 = new Label();
             lb_date = new Label();
+            lb_step_info = new Label();
             tab_con.SuspendLayout();
             tabPage1.SuspendLayout();
             GB_control.SuspendLayout();
@@ -167,6 +168,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(lb_step_info);
             tabPage1.Controls.Add(pb_connect);
             tabPage1.Controls.Add(GB_control);
             tabPage1.Controls.Add(tb_history);
@@ -587,6 +589,11 @@
             resources.ApplyResources(lb_date, "lb_date");
             lb_date.Name = "lb_date";
             // 
+            // lb_step_info
+            // 
+            resources.ApplyResources(lb_step_info, "lb_step_info");
+            lb_step_info.Name = "lb_step_info";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -694,5 +701,6 @@
         private Label label25;
         private Label label24;
         private Button btn_reset_state;
+        private Label lb_step_info;
     }
 }

@@ -369,6 +369,43 @@
   <data name="&gt;&gt;btn_connect.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="lb_step_info.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lb_step_info.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lb_step_info.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lb_step_info.Location" type="System.Drawing.Point, System.Drawing">
+    <value>465, 17</value>
+  </data>
+  <data name="lb_step_info.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 30</value>
+  </data>
+  <data name="lb_step_info.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="lb_step_info.Text" xml:space="preserve">
+    <value>0 - Init</value>
+  </data>
+  <data name="lb_step_info.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="&gt;&gt;lb_step_info.Name" xml:space="preserve">
+    <value>lb_step_info</value>
+  </data>
+  <data name="&gt;&gt;lb_step_info.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lb_step_info.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;lb_step_info.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="pb_connect.Location" type="System.Drawing.Point, System.Drawing">
     <value>676, 334</value>
   </data>
@@ -388,12 +425,11 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;pb_connect.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btn_reset_state.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14pt</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btn_reset_state.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -839,10 +875,10 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;GB_control.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="tb_history.Location" type="System.Drawing.Point, System.Drawing">
-    <value>464, 6</value>
+    <value>464, 52</value>
   </data>
   <data name="tb_history.MaxLength" type="System.Int32, mscorlib">
     <value>65535</value>
@@ -851,7 +887,7 @@
     <value>True</value>
   </data>
   <data name="tb_history.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 325</value>
+    <value>284, 279</value>
   </data>
   <data name="tb_history.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -866,7 +902,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;tb_history.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btn_enable.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 18pt</value>
@@ -893,7 +929,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;btn_enable.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 24</value>
