@@ -40,6 +40,7 @@
             btn_connect = new Button();
             tab_con = new TabControl();
             tabPage1 = new TabPage();
+            lb_step_info = new Label();
             pb_connect = new ProgressBar();
             GB_control = new GroupBox();
             btn_reset_state = new Button();
@@ -99,7 +100,7 @@
             label18 = new Label();
             label17 = new Label();
             lb_date = new Label();
-            lb_step_info = new Label();
+            lb_BuildDate = new Label();
             tab_con.SuspendLayout();
             tabPage1.SuspendLayout();
             GB_control.SuspendLayout();
@@ -176,6 +177,11 @@
             resources.ApplyResources(tabPage1, "tabPage1");
             tabPage1.Name = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // lb_step_info
+            // 
+            resources.ApplyResources(lb_step_info, "lb_step_info");
+            lb_step_info.Name = "lb_step_info";
             // 
             // pb_connect
             // 
@@ -589,15 +595,17 @@
             resources.ApplyResources(lb_date, "lb_date");
             lb_date.Name = "lb_date";
             // 
-            // lb_step_info
+            // lb_BuildDate
             // 
-            resources.ApplyResources(lb_step_info, "lb_step_info");
-            lb_step_info.Name = "lb_step_info";
+            resources.ApplyResources(lb_BuildDate, "lb_BuildDate");
+            lb_BuildDate.Name = "lb_BuildDate";
+            lb_BuildDate.Click += label26_Click;
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(lb_BuildDate);
             Controls.Add(lb_date);
             Controls.Add(tab_con);
             Controls.Add(btn_connect);
@@ -702,5 +710,6 @@
         private Label label24;
         private Button btn_reset_state;
         private Label lb_step_info;
+        private Label lb_BuildDate;
     }
 }
