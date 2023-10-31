@@ -47,7 +47,7 @@ namespace s7_example_put_get
 
             System.DateTime current_time = System.DateTime.Now;
             lb_date.Text = current_time.ToString("dd/MM/yyyy\n HH:mm:ss");
-            lb_BuildDate.Text = GetBuildVersion();
+            lb_BuildDate.Text = "Build\n" + GetBuildVersion();
             tab_con.Enabled = isConnect;
             tb_calculation_value.Text = calculation_value.ToString();
             GB_control.Enabled = auto_overide_enable;
@@ -251,6 +251,13 @@ namespace s7_example_put_get
             {
                 btn_cycle_cut.Text = "ไม่มีผ้า";
             }
+            else if (getCuttingStatus()) {
+                btn_cycle_cut.Text = "CUTTING";
+            }
+            else if (getCuttingStatus()==false)
+            {
+                btn_cycle_cut.Text = "CUT";
+            }
 
             uint current_step = read_int("DB1", "0.0");
             string step_info_str = $"{current_step} - {GetDesForStep(current_step)}";
@@ -330,7 +337,7 @@ namespace s7_example_put_get
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error");
+                MessageBox.Show(ex.Message, "Error : Task_to_yr_task_callback");
             }
         }
 
@@ -347,9 +354,10 @@ namespace s7_example_put_get
             m1_cw_rolling();
             m2_cw_rolling();
         }
-        public int GetCurrentTimestampInSeconds()
+        public long millis()
         {
-            return (int)DateTimeOffset.Now.ToUnixTimeSeconds();
+            long milliseconds = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+            return milliseconds;
         }
 
         private async Task WaitUntil(Func<Task<bool>> condition, int timeout)
@@ -373,25 +381,53 @@ namespace s7_example_put_get
         /// </summary>
         private async void stop_moving()
         {
-            Debug.WriteLine("Start Cutting Loop");
+            long st_stop_loop = millis();
+            Debug.WriteLine($"Start Cutting Loop at {millis() - st_stop_loop}");
             m1_stop();                                      // Stop All Motor
-            m2_stop();                                      
+            m2_stop();
             btn_yr_tare.Text = "Reset";                     
             btn_move_yr.Text = "Start";                     
             btn_move_yr.ForeColor = Color.Black;            
             btn_move_yr.BackColor = Color.Chartreuse;       
             start_cal_to_yr = false;                        // Set Stop Thread state 
-            Debug.WriteLine("Stop All Motor");
+            Thread.Sleep(2000);
+            Debug.WriteLine($"Stop All Motor at {millis() - st_stop_loop}"); 
             start_cutting_cycle();                          // start cutting
-            Debug.WriteLine("Start Cutting Loop");
-            await WaitUntil(getCuttingStatusAsync, 60000);  // Loop wait for this return false or more than 60s
+            Debug.WriteLine($"Start Cutting Loop at {millis() - st_stop_loop}");
+            st_stop_loop = millis();
+            while (!((getCuttingStatus() == false) || ((millis() - st_stop_loop) >= 60000L))) {
+                Debug.WriteLine($"Cutting Loop at {millis() - st_stop_loop}");
+                Thread.Sleep(task_interval);
+            }
+
+            long st_stop_loop_rool_back = millis();
+            Debug.WriteLine($"Start Rolling at {millis() - st_stop_loop_rool_back}");
             m1_ccw_rolling();                               // rolling M1 backward
-            m2_cw_rolling();                                // rolling M2 forward
-            await WaitUntil(getFab_roll1Async, 10000);      // Loop wait for this return false or more than 10s
+            m2_cw_rolling();                                // rolling M2 forward 
+            bool m1_is_stop = false;
+            bool m2_is_stop = false;
+            while ( !((millis() - st_stop_loop_rool_back) >= 10000L)) { 
+                if (getFab_roll1() == false) {
+                    m1_is_stop = true;
+                    m1_stop();
+                    Debug.WriteLine($"Rolling Back M1 Stop at {millis() - st_stop_loop_rool_back}");
+                }
+                if (getFab_roll2() == false)
+                {
+                    m2_is_stop = true;
+                    m2_stop();
+                    Debug.WriteLine($"Rolling Back M2 Stop at {millis() - st_stop_loop_rool_back}");
+                }
+                if (m1_is_stop && m2_is_stop) {
+                    Debug.WriteLine($"Rolling Back M1/M2 Stop at {millis() - st_stop_loop_rool_back}");
+                    break;
+                }
+                Debug.WriteLine($"Rolling Back Loop at {millis() - st_stop_loop_rool_back}");
+                Thread.Sleep(task_interval);
+            }
             m1_stop();
-            await WaitUntil(getFab_roll2Async, 10000);      // Loop wait for this return false or more than 10s
             m2_stop();                                      // All Stop
-            Debug.WriteLine("Rolling Back M1/M2 Stop");
+            Debug.WriteLine($"Done at {millis() - st_stop_loop}");
         }
         private void Start_to_yr_task()
         {
@@ -430,7 +466,7 @@ namespace s7_example_put_get
                 }
                 else
                 {
-                    MessageBox.Show("Invaild CPU Type", "CPU Select Error");
+                    MessageBox.Show("Invaild CPU Type", "CPU Select Error : btn_connect_Click");
                     cpuType = new CpuType();
                     str_history += "CPU Select Error \r\n";
                 }
@@ -443,7 +479,7 @@ namespace s7_example_put_get
                 catch (Exception ex)
                 {
                     plc_ip = IPAddress.Parse("127.0.0.1");
-                    MessageBox.Show("Invaild IP Address \n" + ex.Message, "IP Address Error");
+                    MessageBox.Show("Invaild IP Address \n" + ex.Message, "IP Address Error : btn_connect_Click");
                     str_history += "Error " + ex.Message + "\r\n";
                 }
                 try
@@ -453,7 +489,7 @@ namespace s7_example_put_get
                 catch (Exception ex)
                 {
                     str_history += "Error " + ex.Message + "\r\n";
-                    MessageBox.Show("Invaild Rack No\n" + ex.Message, "Invaild Data Type");
+                    MessageBox.Show("Invaild Rack No\n" + ex.Message, "Invaild Data Type : btn_connect_Click");
                 }
 
                 try
@@ -463,7 +499,7 @@ namespace s7_example_put_get
                 catch (Exception ex)
                 {
                     str_history += "Error " + ex.Message + "\r\n";
-                    MessageBox.Show("Invaild Slot No\n" + ex.Message, "Invaild Data Type");
+                    MessageBox.Show("Invaild Slot No\n" + ex.Message, "Invaild Data Type : btn_connect_Click");
                 }
 
                 isConnect = init_connection(cpuType, plc_ip, plc_rack_no, plc_slot_no);
@@ -475,7 +511,7 @@ namespace s7_example_put_get
                 str_history += plc_slot_no.ToString() + "\r\n"; 
             }
             else
-            {
+            { 
                 str_history += "PLC Disconnect" + "\r\n";
                 plc.Close();
                 isConnect = false; 
@@ -491,6 +527,7 @@ namespace s7_example_put_get
                 this.Text = "S7 Example :: PLC is not connect";
             }
             tab_con.Enabled = isConnect;
+            btn_connect.Enabled = !isConnect;
             tb_history.Text = str_history;
         }
 
@@ -521,7 +558,7 @@ namespace s7_example_put_get
                 }
                 else
                 {
-                    MessageBox.Show("Type Not support", "Invalid Data");
+                    MessageBox.Show("Type Not support", "Invalid Data : btn_read_data_Click");
                     return;
                 }
 
@@ -529,7 +566,7 @@ namespace s7_example_put_get
             catch (Exception ex)
             {
                 lb_data_read.Text = "Error";
-                MessageBox.Show(ex.Message, "READ ERROR");
+                MessageBox.Show(ex.Message, "READ ERROR : btn_read_data_Click");
             }
         }
 
@@ -558,7 +595,7 @@ namespace s7_example_put_get
             catch (Exception ex)
             {
                 str_history += "Write Error " + ex.Message + "\r\n";
-                MessageBox.Show(ex.Message, "Error");
+                MessageBox.Show(ex.Message, "Error : write_bool");
             }
             tb_history.Text = str_history;
         }
@@ -588,7 +625,7 @@ namespace s7_example_put_get
             catch (Exception ex)
             {
                 str_history += "Write Error " + ex.Message + "\r\n";
-                MessageBox.Show(ex.Message, "Error");
+                MessageBox.Show(ex.Message, "Error : write_int");
             }
             tb_history.Text = str_history;
         }
@@ -617,7 +654,7 @@ namespace s7_example_put_get
             catch (Exception ex)
             {
                 str_history += "Write Error " + ex.Message + "\r\n";
-                MessageBox.Show(ex.Message, "Error");
+                MessageBox.Show(ex.Message, "Error : write_real");
             }
             tb_history.Text = str_history;
         }
@@ -638,9 +675,9 @@ namespace s7_example_put_get
         /// <returns>
         /// an integer value.
         /// </returns>
-        uint read_int(string data_block, string data_address, bool err = true)
+        ushort read_int(string data_block, string data_address, bool err = true)
         {
-            uint dint = 0;
+            ushort dint = 0;
             string con = "";
             con += data_block;
             try
@@ -648,15 +685,15 @@ namespace s7_example_put_get
                 con += ".DBW";
                 con += data_address;
                 //str_history += "Write " + data.ToString() + " to " + con + "\r\n";
-                var dword = (uint)(plc.Read(con));
-                dint = (uint)dword.ConvertToInt();
+               
+                dint = (ushort)(plc.Read(con));
             }
             catch (Exception ex)
             {
                 str_history += "Read Error " + ex.Message + "\r\n";
                 if (err)
                 {
-                    MessageBox.Show(ex.Message, "Error");
+                    MessageBox.Show(ex.Message, "Error : read_int");
                 }
             }
             return dint;
@@ -695,7 +732,7 @@ namespace s7_example_put_get
                 str_history += "Read Error " + ex.Message + "\r\n";
                 if (err)
                 {
-                    MessageBox.Show(ex.Message, "Error");
+                    MessageBox.Show(ex.Message, "Error :read_real");
                 }
             }
 
@@ -735,7 +772,7 @@ namespace s7_example_put_get
                 str_history += "Read Error " + ex.Message + "\r\n";
                 if (err)
                 {
-                    MessageBox.Show(ex.Message, "Error");
+                    MessageBox.Show(ex.Message, "Error :read_bool ");
                 }
             }
             return real;
@@ -754,7 +791,7 @@ namespace s7_example_put_get
                     data_address += tb_write_address.Text;
                     bool data = bool.Parse(tb_data_to_write.Text);
                     plc.Write(data_address, data);
-                    MessageBox.Show("Write data into :" + data_address + "\n Data = " + data.ToString(), "Write Sucess");
+                    MessageBox.Show("Write data into :" + data_address + "\n Data = " + data.ToString(), "Write Sucess button1_Click");
                 }
                 else if (type_str == "Dint")
                 {
@@ -762,7 +799,7 @@ namespace s7_example_put_get
                     data_address += tb_write_address.Text;
                     short data = short.Parse(tb_data_to_write.Text);
                     plc.Write(data_address, data);
-                    MessageBox.Show("Write data into :" + data_address + "\n Data = " + data.ToString(), "Write Sucess");
+                    MessageBox.Show("Write data into :" + data_address + "\n Data = " + data.ToString(), "Write Sucess button1_Click");
 
                 }
                 else if (type_str == "Real")
@@ -771,13 +808,13 @@ namespace s7_example_put_get
                     data_address += ".DBD";
                     data_address += tb_write_address.Text;
                     plc.Write(data_address, data);
-                    MessageBox.Show("Write data into :" + data_address + "\n Data = " + data.ToString(), "Write Sucess");
+                    MessageBox.Show("Write data into :" + data_address + "\n Data = " + data.ToString(), "Write Sucess button1_Click");
 
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Invalid Data");
+                MessageBox.Show(ex.Message, "Invalid Data button1_Click");
             }
         }
 
@@ -791,11 +828,13 @@ namespace s7_example_put_get
             {
                 StartRead_task();
                 btn_enable.Text = "Disable";
+                btn_connect.Enabled = false;
                 auto_override_enable();
             }
             else
             {
                 StopRead_task();
+                btn_connect.Enabled = true;
                 btn_enable.Text = "Enable";
                 auto_override_disable();
                 btn_move_yr.Text = "Move yr";
@@ -901,9 +940,13 @@ namespace s7_example_put_get
                 target_to_move = double.Parse(tb_yr_to_move.Text);
                 if (target_to_move < 0.1)
                 {
-                    MessageBox.Show("Taget near ~0.0", "Invalid Parameter");
-                    target_to_move = 1.0;
-                    tb_yr_to_move.Text = target_to_move.ToString();
+                    var resualt = MessageBox.Show("Taget near ~0.0\nDoyou want to test at 1 yr", "Invalid Parameter btn_move_yr_Click", MessageBoxButtons.YesNo);
+                    if (resualt == DialogResult.Yes)
+                    {
+                        target_to_move = 1.0;
+                        tb_yr_to_move.Text = target_to_move.ToString();
+                    } 
+                    
                 }
                 if ((target_to_move >= current_yr))
                 {
@@ -918,7 +961,7 @@ namespace s7_example_put_get
                 }
                 else
                 {
-                    DialogResult result = MessageBox.Show("Current length is on setting. Do you want to reset the setting parameter?", "Setting Parameter Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult result = MessageBox.Show("Current length is on setting. Do you want to reset the setting parameter?", "Setting Parameter Warning btn_move_yr_Click", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     if (result == DialogResult.Yes)
                     {
@@ -934,7 +977,7 @@ namespace s7_example_put_get
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error");
+                MessageBox.Show(ex.Message, "Error btn_move_yr_Click");
             }
 
 
@@ -947,7 +990,7 @@ namespace s7_example_put_get
 
         private void btn_yr_tare_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you want to stop and reset current job?", "Warning abort work", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Do you want to stop and reset current job?", "Warning abort work btn_yr_tare_Click", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (result == DialogResult.Yes)
             {
@@ -985,7 +1028,7 @@ namespace s7_example_put_get
             catch (Exception ex)
             {
                 calculation_value = 1;
-                MessageBox.Show(ex.Message, "Parse Parameter Error");
+                MessageBox.Show(ex.Message, "Parse Parameter Error button2_Click");
             }
         }
 
@@ -994,7 +1037,6 @@ namespace s7_example_put_get
             if (auto_overide_enable)
             {
                 start_cutting_cycle();
-                btn_cycle_cut.Enabled = false;
                 btn_cycle_cut.Text = "Cutting";
             }
         }
@@ -1020,7 +1062,7 @@ namespace s7_example_put_get
             catch (Exception ex)
             {
                 calculation_value = 1;
-                MessageBox.Show(ex.Message, "Parse Parameter Error");
+                MessageBox.Show(ex.Message, "Parse Parameter Error button4_Click");
             }
         }
 
